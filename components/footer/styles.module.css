@@ -1,0 +1,62 @@
+.root {
+    position: fixed;
+    bottom: 0;
+    color: #000;
+    width: 94%;
+    left: 3%;
+    transition: .35s ease-out .1s;
+    transform: translateY(100%);
+    height: 100vh;
+    z-index: 888;
+}
+
+.root.active {
+    transform: translateY(0);
+}
+
+.mask {
+    background: #000;
+    opacity: 0;
+    height: 50vh;
+    z-index: 2;
+    position: relative;
+    transition: none;
+    cursor: pointer;
+}
+
+.root.active .mask {
+    opacity: .5;
+    transition: .1s ease-out .35s;
+}
+
+.content {
+    height: 50vh;
+    padding: 20px 0;
+    /*opacity: .95;*/
+    background: ivory;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, .9);
+    position: relative;
+    z-index: 3;
+}
+
+.blob {
+    width: 30px;
+    height: 30px;
+    opacity: .7;
+}
+
+.blobWrapper {
+    z-index: 889;
+    transition: .15s ease-out .45s;
+    position: absolute;
+    top: -35px;
+    left: calc(50% - 35px);
+    cursor: pointer;
+    padding: 10px;
+}
+
+.root.active .blobWrapper {
+    top: 25vh;
+    transition: none;
+}
