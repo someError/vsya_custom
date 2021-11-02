@@ -1,0 +1,21 @@
+.slider img {
+    width: 100%;
+    border-radius: 3px;
+    margin: 2px 0;
+    opacity: .5;
+    transition: .25s ease-out .15s;
+}
+
+.slider div {
+    width: 100%!important;
+}
+
+.slider {
+    height: 50vh;
+    width: 80vw;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 3px;
+    padding: 0 5vh;
+    /*overflow: hidden;*/
+}

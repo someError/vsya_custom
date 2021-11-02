@@ -1,11 +1,23 @@
 .root {
-    border: solid #9c261a 3px;
-    border-radius: 3px;
-    font-size: 1.25rem;
+    border: solid #9c261a 4px;
+    /*border-radius: 3px;*/
+    font-size: 1rem;
+    font-weight: 700;
     text-transform: uppercase;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
     z-index: 2;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+}
+
+.root svg {
+    font-size: 1em;
+    color: #9c261a;
+    position: absolute;
+    top: -5px;
+    right: 12px;
+    z-index: -1;
 }
 
 /*.root:before {*/
@@ -33,12 +45,13 @@
 /*}*/
 
 .activeValue {
-    padding: 5px 10px;
+    padding: 5px 2px;
     z-index: 3;
     display: flex;
     align-items: center;
     color: antiquewhite;
-    opacity: .7;
+    justify-content: center;
+    /*opacity: .7;*/
 }
 
 .ul {
@@ -58,7 +71,8 @@
 }
 
 .li {
-    padding: 5px 10px;
+    padding: 5px 2px;
+    text-align: center;
 }
 
 .mask {

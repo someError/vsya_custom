@@ -1,9 +1,24 @@
 html {
     margin: 0;
     padding: 0;
+    --clr0: bisque;
+    --clr1: lightsalmon;
+    --clr2: tomato;
+    --clr3: lightcoral;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -35,6 +50,19 @@ body {
     width: 20px;
     transform: scale(1);
     animation: pulse-black 2s infinite;
+}
+
+.slick-active:not(.slick-center) img {
+    opacity: 1!important;
+    transition: .25s ease-out .15s;
+    transform: scale(1.15);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, .6);
+    position: relative;
+    z-index: 9;
+}
+
+.slick-list {
+    overflow: visible!important;
 }
 
 @keyframes pulse-black {

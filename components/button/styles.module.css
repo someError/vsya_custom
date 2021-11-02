@@ -31,6 +31,23 @@
     animation: move 8s infinite;
 }
 
+.descr {
+    font-size: .75em;
+    position: absolute;
+    width: 100%;
+    color: antiquewhite;
+    text-align: center;
+    bottom: -20px;
+    letter-spacing: 1px;
+    left: 0;
+    /*opacity: .8;*/
+}
+
+.disabled {
+    filter: grayscale(100);
+    opacity: .8;
+}
+
 .root:before {
     position: absolute;
     content: '';

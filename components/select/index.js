@@ -1,7 +1,8 @@
 import styles from './styles.module.css'
 import {useState} from "react";
 import cn from 'classnames'
-import { RiArrowDropDownLine } from 'react-icons/ri'
+import { IoIosPlanet } from 'react-icons/io'
+import { MdLanguage } from 'react-icons/md'
 
 function Select (props) {
     const { options } = props;
@@ -23,7 +24,7 @@ function Select (props) {
     }
     return <div className={styles.wrap}>
         <div className={cn(styles.root, {[styles.open]: open})}>
-            <div onClick={() => setOpen(!open)} className={styles.activeValue}>{value.label}  <RiArrowDropDownLine/></div>
+            <div onClick={() => setOpen(!open)} className={styles.activeValue}>{value.label} <MdLanguage/></div>
             <ul className={styles.ul}>
                 {
                     opts.map(option => <li onClick={() => handleChange(option)} className={styles.li}>{ option.label }</li>)
