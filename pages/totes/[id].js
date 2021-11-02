@@ -34,12 +34,11 @@ function Shopper () {
                 <article className={styles.article}>
                     {/*<p></p>️*/}
                     {/*<p>Это -</p>*/}
-                    {/*<p><Creepy>👨🏻‍🎨</Creepy>Уникальный картина выполненный кистью</p>*/}
-                    {/*<p><Creepy>🌶️</Creepy> <span>сочные</span>, специализированные износостойкие краски<Creepy>🎨</Creepy></p>*/}
-                    {/*<p><Creepy>🔥</Creepy>Вместительный шоппер превосходного <span>качества</span></p>*/}
-                    {/*<p><Creepy>🖤</Creepy>️Ии..и стильная упаковка из черного мата</p>*/}
-                    <p><i><Creepy>👜</Creepy></i><Creepy>🕶</Creepy><span>Вся</span> уникальная и непохожая ни на одну другую.</p>
-                    <p><i><Creepy>🎨</Creepy></i><i><Creepy>🌶️</Creepy></i><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>
+                    {/*<p><i><Creepy>👜</Creepy></i><Creepy>🕶</Creepy><span>Вся</span> уникальная и непохожая ни на одну другую.</p>*/}
+                    {/*<p><i><Creepy>🎨</Creepy></i><i><Creepy>🌶️</Creepy></i><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>*/}
+                    {/*<p><i><Creepy>🔥</Creepy></i><i><Creepy>🕶</Creepy></i><span>Вся</span> образцово прошита ии..ии упакована в крутой черный мат.</p>*/}
+                    <p><i>👜</i><i>🕶</i><span>Вся</span> уникальна и непохожа ни на одну другую.</p>
+                    <p><i>🎨</i><i>🌶️</i><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>
                     <p><i><Creepy>🔥</Creepy></i><i><Creepy>🕶</Creepy></i><span>Вся</span> образцово прошита ии..ии упакована в крутой черный мат.</p>
                     {/*<p><Creepy>🖤</Creepy>️Вся упаковка из стильного черного мата</p>*/}
                 </article>
@@ -73,6 +72,7 @@ function Shopper () {
     </div>
 }
 
+/**TODO: GET STATIC PATH!!!!!*/
 // export function getServerSideProps(context) {
 //
 //     return { props: { tote } }

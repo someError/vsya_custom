@@ -22,7 +22,7 @@
 }
 
 .detailsShow .detailsMask {
-    opacity: .5;
+    opacity: .85;
 }
 
 .detailsMaskContent {
@@ -47,11 +47,13 @@
     position: relative;
     z-index: 9;
     margin-top: 30px;
+    justify-content: space-around;
 }
 
 .buttons a {
     line-height: 1rem;
-    width: 40%;
+    width: 45%;
+    margin: 0;
 }
 
 .buttons svg {
@@ -65,7 +67,7 @@
 
 
 .article {
-    color: #fff;
+    color: rgba(255,255,255,.8);
     position: relative;
     z-index: 2;
     letter-spacing: 1px;
@@ -90,22 +92,26 @@
 
 .article p {
     margin: 5px 0;
-    padding: 7px 10px 3px 50px;
+    padding: 0px 10px 3px 50px;
     position: relative;
     line-height: 1.5rem;
 }
 
 .article div {
-    display: inline;
-    font-size: 2rem;
-    padding: 5px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2rem;
+    /*display: inline;*/
+    /*font-size: 2rem;*/
+    /*padding: 5px;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 2rem;*/
 }
 
 .article i {
+    font-size: 2rem;
+    margin: 5px;
+    width: 2rem;
+    display: inline-block;
     font-style: normal;
     position: absolute;
     left: 0;
