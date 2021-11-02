@@ -6,6 +6,7 @@ import {useRouter} from "next/router";
 function Header () {
     const router = useRouter();
     const langs = [{value: 'en', label: 'en'}, {value: 'ru', label: 'ru'}];
+    console.log(router)
 
     return (
         <div className={styles.root}>
@@ -13,7 +14,7 @@ function Header () {
             <div className={styles.select}>
                 <Select
                     initValue={langs.filter(({ value }) => router.locale === value)[0]}
-                    onChange={({ value }) => router.push(router.pathname,router.pathname,{locale: value})}
+                    onChange={({ value }) => router.push(router.asPath, router.asPath,{locale: value})}
                     options={langs}
                 />
             </div>
