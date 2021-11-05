@@ -52,7 +52,7 @@ body {
     animation: pulse-black 2s infinite;
 }
 
-.slick-active:not(.slick-center) img {
+.slick-current img {
     opacity: 1!important;
     transition: .25s ease-out .15s;
     transform: scale(1.15);
@@ -63,6 +63,7 @@ body {
 
 .slick-list {
     overflow: visible!important;
+    transform: translateY(-60vw)!important;
 }
 
 @keyframes pulse-black {

@@ -36,28 +36,34 @@ export default function DetailSlider() {
         <div ref={sliderRef}>
             <Slider className={styles.slider} {...settings}>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops1.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops2.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops1.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops2.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops1.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops2.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops1.jpeg" alt=""/>
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHxxFueBg_VI1mrSEjqaKki1VVv6IgROIQg&usqp=CAU" alt=""/>
+                    <img src="/assets/imgs/whoops2.jpeg" alt=""/>
+                </div>
+                <div>
+                    <img src="/assets/imgs/whoops1.jpeg" alt=""/>
+                </div>
+                <div>
+                    <img src="/assets/imgs/whoops2.jpeg" alt=""/>
                 </div>
             </Slider>
         </div>

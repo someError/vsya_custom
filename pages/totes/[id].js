@@ -13,6 +13,7 @@ import Button from '../../components/button'
 import DetailSlider from "../../detailSlider";
 import {useSwipeable} from "react-swipeable";
 import cn from 'classnames'
+import VerticalSlider from '../../components/verticalCarousel'
 
 function Shopper () {
     const { query: { id } } = useRouter();
@@ -31,6 +32,7 @@ function Shopper () {
             </div>
             <div className={styles.detailsContent}>
                 <DetailSlider></DetailSlider>
+                {/*<VerticalSlider></VerticalSlider>*/}
                 <article className={styles.article}>
                     {/*<p></p>️*/}
                     {/*<p>Это -</p>*/}
