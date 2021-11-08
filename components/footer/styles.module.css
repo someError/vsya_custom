@@ -53,7 +53,7 @@
     transition: .15s ease-out .45s;
     position: absolute;
     top: -35px;
-    left: calc(50% - 35px);
+    left: calc(50% - 45px);
     cursor: pointer;
     padding: 10px;
 }

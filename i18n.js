@@ -1,10 +1,10 @@
 export default {
     en: {
-        buyBtn: 'create',
+        buyBtn: 'watch this',
         picasso: 'Total totes',
     },
     ru: {
-        buyBtn: 'создать',
+        buyBtn: 'смотреть эту',
         picasso: 'Шопперов'
     }
 }

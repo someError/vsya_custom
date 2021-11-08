@@ -2,8 +2,34 @@
     width: 100%;
     border-radius: 3px;
     margin: 2px 0;
-    opacity: .5;
+    opacity: .8;
     transition: .25s ease-out .15s;
+    filter: grayscale(100);
+}
+
+.sliderMask {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.sliderMaskTop {
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.sliderMaskBot {
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .slider div {
@@ -17,5 +43,10 @@
     overflow: hidden;
     border-radius: 3px;
     padding: 0 10vw;
+    position: relative;
     /*overflow: hidden;*/
+}
+
+.wrapper {
+    position: relative;
 }

@@ -15,9 +15,9 @@
     filter: sepia(1);
 }
 
-.video1 {
-    filter: sepia(.7);
-}
+/*.video1 {*/
+/*    filter: sepia(1);*/
+/*}*/
 
 .blackMask {
     height: 50vh;

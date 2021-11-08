@@ -6,10 +6,10 @@ import {useRouter} from "next/router";
 function Header () {
     const router = useRouter();
     const langs = [{value: 'en', label: 'en'}, {value: 'ru', label: 'ru'}];
-    console.log(router)
-
+    // console.log(router)
     return (
         <div className={styles.root}>
+            {/*<img src="/assets/imgs/logo-test.png" alt=""/>*/}
             <div className={styles.helloWrapper}><div className={cn(styles.hello)}><div>В<b>С</b>Я</div><span>кастом <i></i></span></div></div>
             <div className={styles.select}>
                 <Select

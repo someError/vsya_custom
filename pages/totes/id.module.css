@@ -90,9 +90,10 @@
     letter-spacing: 0;
 }
 
+
 .article p {
     margin: 5px 0;
-    padding: 0px 10px 3px 50px;
+    padding: 0px 10px 3px 20px;
     position: relative;
     line-height: 1.5rem;
 }
