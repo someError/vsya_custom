@@ -1,8 +1,9 @@
 import styles from './styles.module.css'
 import {useState} from "react";
 import cn from 'classnames'
-import { IoIosPlanet } from 'react-icons/io'
+import { RiArrowDownSLine} from 'react-icons/ri'
 import { MdLanguage } from 'react-icons/md'
+import Creepy from "../creepy";
 
 function Select (props) {
     const { options } = props;
@@ -23,16 +24,17 @@ function Select (props) {
         props.onChange(value)
     }
     return <div className={styles.wrap}>
-        <div className={cn(styles.root, {[styles.open]: open})}>
-            <div onClick={() => setOpen(!open)} className={styles.activeValue}>{value.label} <MdLanguage/></div>
-            <ul className={styles.ul}>
-                {
-                    opts.map(option => <li onClick={() => handleChange(option)} className={styles.li}>{ option.label }</li>)
-                }
-            </ul>
+            <div className={cn(styles.root, {[styles.open]: open}, props.className)}>
+                <div onClick={() => setOpen(!open)} className={styles.activeValue}>{value.label}<RiArrowDownSLine/></div>
+                <ul className={styles.ul}>
+                    {
+                        opts.map(option => <li onClick={() => handleChange(option)} className={styles.li}>{ option.label }</li>)
+                    }
+                </ul>
+            </div>
+            {open && <div className={styles.mask} onClick={() => setOpen(false)} />}
         </div>
-        {open && <div className={styles.mask} onClick={() => setOpen(false)} />}
-    </div>
+
 }
 
 export default Select

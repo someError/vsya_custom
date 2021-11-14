@@ -3,7 +3,7 @@ import cn from 'classnames'
 function Creepy (props) {
     return (
         <>
-            <div className={styles.root}>
+            <div className={cn(styles.root, props.className)}>
                 {/*<p>Ты</p>*/}
                 {/*<p className={styles.small}>точно знаешь</p>*/}
                 {/*<p>что</p>*/}

@@ -2,7 +2,7 @@ export function getItems(id) {
     const items = [
         {
             src: '/assets/imgs/sadako-preview.png',
-            name: 'Sad',
+            name: 'sad',
             name2: 'ako',
             id: 'sadako',
             srcDetail: '/assets/imgs/sadako-detail.jpeg',
@@ -26,7 +26,7 @@ export function getItems(id) {
             src: '/assets/imgs/rahataha-preview.png',
             name: 'phill',
             name2: 'black',
-            id: 'phill-black',
+            id: 'phillblack',
             srcDetail: '/assets/imgs/rahataha-detail.jpeg',
             gallery: [
                 '/assets/imgs/phillblack/phillblack1.jpeg',
@@ -36,7 +36,7 @@ export function getItems(id) {
         {
             src: '/assets/imgs/whoops-preview.png',
             name: 'whoo',
-            name2: 'ps',
+            name2: 'shy',
             id: 'whooshy',
             srcDetail: '/assets/imgs/whoops-detail.jpeg',
             gallery: [

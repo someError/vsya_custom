@@ -31,18 +31,18 @@ function MyApp({ Component, pageProps }) {
             <Header />
             <Component {...pageProps} />
             <Footer active={contextState.footerContext || footer} setActive={setFooter}><div className={styles.wrapper}>
-                <a href="https://www.instagram.com/vass_custom/?hl=ru" target={'_blank'} className={styles.footerRow}>
+                <a href="https://www.instagram.com/vsya_custom" target={'_blank'} className={styles.footerRow}>
                     <FiInstagram></FiInstagram>
                     <div className={styles.footerRowInst}>
-                        <div>vass_custom</div>
-                        <div>instagram.com</div>
+                        <div>vsya_custom</div>
+                        <div>Instagram.com</div>
                     </div>
                 </a>
                 <a href="mailto:redrows@gmail.com" target={'_blank'} className={styles.footerRow}>
                     <FiMail></FiMail>
                     <div className={styles.footerRowInst}>
-                        <div>redrows@gmail.com</div>
-                        <div>отправить письмо</div>
+                        <div>vsya_custom@gmail.com</div>
+                        <div>Отправить письмо</div>
                     </div>
                 </a>
             </div></Footer>

@@ -43,8 +43,11 @@
 
 
 .buttons {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    bottom: 30px;
     display: flex;
-    position: relative;
     z-index: 9;
     margin-top: 30px;
     justify-content: space-around;
@@ -80,14 +83,15 @@
     background: #000;
 }
 
-.article span {
+.article:not(.chat) span {
     font-size: 1.25em;
-    text-transform: uppercase;
-    font-weight: 900;
+    /*text-transform: uppercase;*/
+    font-weight: 700;
     color: #9c261a;
-    transform: translateY(3px);
+    /*transform: translateY(3px);*/
     display: inline-block;
     letter-spacing: 0;
+    margin-right: 2px;
 }
 
 
@@ -98,26 +102,62 @@
     line-height: 1.5rem;
 }
 
-.article div {
-    /*display: inline;*/
-    /*font-size: 2rem;*/
-    /*padding: 5px;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top: 0;*/
-    /*width: 2rem;*/
+.chat {
+    display: flex;
+    /*flex-direction: column;*/
 }
 
-.article i {
-    font-size: 2rem;
-    margin: 5px;
-    width: 2rem;
-    display: inline-block;
-    font-style: normal;
+.chat p {
+    font-size: .75rem;
+    max-width: 80%;
+    padding-top: 3px;
+    color: antiquewhite;
+    /*color: #000000;*/
+    border-radius: 5px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.chat b {
     position: absolute;
-    left: 0;
     top: 0;
-    filter: contrast(3);
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: solid 1px #9c261a;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: antiquewhite;
+}
+
+.chat b img {
+    max-width: 40px;
+}
+
+/*.chat p:first-of-type {*/
+/*    background: var(--clr0);*/
+/*    margin-left: auto;*/
+/*    transform: translateX(20px);*/
+/*    padding-right: 30px;*/
+/*}*/
+
+/*.chat p:last-of-type {*/
+/*    background: var(--clr1);*/
+/*    transform: translateX(-20px);*/
+/*    padding-left: 30px;*/
+/*}*/
+
+.article i {
+    display: inline;
+    font-size: 1.25em;
+    filter: contrast(1.5);
+    font-style: normal;
+}
+
+.article div {
+    display: inline;
 }
 
 .img {

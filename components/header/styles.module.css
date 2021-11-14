@@ -1,73 +1,25 @@
 .root {
     font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 27px;
+    z-index: 1000;
+    padding-top: 10px;
 }
 
-.hello {
-    font-size: 2.5rem;
-    /*text-align: center;*/
-    color: bisque;
-    padding: 10px 0 0;
-    line-height: 1;
-    text-transform: uppercase;
-    font-weight: 900;
-    /*width: 70%;*/
-    position: relative;
-    display: inline-flex;
-    opacity: .7;
+.root > div {
+    display: flex;
+    /*align-items: center;*/
 }
 
-.hello div {
+.logo {
     position: relative;
     z-index: 2;
+    height: 27px;
 }
 
-.hello b {
-    color: #9c261a;
-    font-weight: 900;
-}
-
-.hello span {
-    font-size: .375em;
-    text-transform: none;
-    position: absolute;
-    bottom: -9px;
-    left: 2px;
-    letter-spacing: .5px;
-    opacity: 1;
-    color: antiquewhite;
-    display: block;
-}
-
-.hello i {
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    display: inline-flex;
-    background: #db3727;
-}
-
-.hello .blob {
-    position: absolute;
-    z-index: 1;
-    right: 42px;
-    top: 2px;
-    background: #000;
-}
-
-.helloWrapper {
-    /*background: #000;*/
-    /*opacity: .6;*/
-    opacity: 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-}
-
-.select {
-    position: absolute;
-    width: 60px;
-    right: 20px;
-    top: 10px;
-    z-index: 1000;
+.logo img {
+    height: 100%;
 }

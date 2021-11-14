@@ -7,7 +7,7 @@ import Head from 'next/head'
 import styles from './id.module.css'
 import {useScript} from "../../hooks/useScript";
 import Creepy from "../../components/creepy";
-import { FiChevronsLeft } from 'react-icons/fi'
+import { GiGalaxy } from 'react-icons/gi'
 import { FaBitcoin, FaInstagram } from 'react-icons/fa'
 import Button from '../../components/button'
 import DetailSlider from "../../detailSlider";
@@ -54,15 +54,14 @@ function Shopper () {
             <div className={styles.detailsContent}>
                 <DetailSlider srcArray={tote.gallery}></DetailSlider>
                 {/*<VerticalSlider></VerticalSlider>*/}
-                <article className={styles.article} {...contentHandlers}>
+                <article className={cn(styles.article)} {...contentHandlers}>
                     {/*<p></p>️*/}
                     {/*<p>Это -</p>*/}
                     {/*<p><i><Creepy>👜</Creepy></i><Creepy>🕶</Creepy><span>Вся</span> уникальная и непохожая ни на одну другую.</p>*/}
                     {/*<p><i><Creepy>🎨</Creepy></i><i><Creepy>🌶️</Creepy></i><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>*/}
                     {/*<p><i><Creepy>🔥</Creepy></i><i><Creepy>🕶</Creepy></i><span>Вся</span> образцово прошита ии..ии упакована в крутой черный мат.</p>*/}
-                    <p><span>Вся</span> уникальна и непохожа ни на одну другую.</p>
-                    <p><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>
-                    <p><span>Вся</span> образцово прошита ии..ии упакована в крутой черный мат.</p>
+                    <p><span>Вся</span> в сочных красках <i><Creepy>🎨</Creepy><Creepy>🌶️</Creepy></i>, пропитана мистикой и волшебством минимализма.</p>
+                    <p><span>Вкусная</span> упаковка из хрустящей темной материи <i><Creepy>🌒</Creepy></i> </p>
                     {/*<p><span>Вся</span> в сочных, сверхъярких красках.</p>*/}
                     {/*<p>Эта картина  парам пам пам пам тара рам</p>*/}
                     {/*<p>Стильная упаковка из крутого чернорго мата</p>*/}
@@ -85,9 +84,13 @@ function Shopper () {
             <div>Галерея</div>
         </div>
         <div className={'wrapper'}>
-            <article className={styles.article}>
-                <p>Какой то тексттттю.....</p>
-                <p>И еще Какой то тексттттю.....</p>
+            {/*<article className={cn(styles.article, styles.chat)}>*/}
+            {/*    <p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
+            {/*    <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>*/}
+            {/*</article>*/}
+            <article className={cn(styles.article, styles.chat)}>
+                {/*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
+                <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>
             </article>
             <div className={styles.buttons}>
                 <Button href={'/'}>Заказать через instgrm <FaInstagram></FaInstagram></Button>
