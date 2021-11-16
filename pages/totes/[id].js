@@ -14,6 +14,7 @@ import DetailSlider from "../../detailSlider";
 import {useSwipeable} from "react-swipeable";
 import cn from 'classnames'
 import Context from "../../appContext";
+import SwipeNote from "../../components/swipeNote";
 
 function Shopper () {
     const appState = useContext(Context);
@@ -91,6 +92,7 @@ function Shopper () {
             <article className={cn(styles.article, styles.chat)}>
                 {/*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
                 <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>
+                <SwipeNote></SwipeNote>
             </article>
             <div className={styles.buttons}>
                 <Button href={'/'}>Заказать через instgrm <FaInstagram></FaInstagram></Button>

@@ -9,8 +9,7 @@ export function getItems(id) {
             gallery: [
                 '/assets/imgs/sadako/sadako3.jpeg',
                 '/assets/imgs/sadako/sadako4.jpeg',
-                '/assets/imgs/phillblack/phillblack1.jpeg',
-                '/assets/imgs/phillblack/phillblack2.jpeg',
+                '/assets/imgs/sadako/sadako1.jpeg',
             ]
         },
         {
@@ -20,10 +19,9 @@ export function getItems(id) {
             id: 'nails',
             srcDetail: '/assets/imgs/nails-detail.jpeg',
             gallery: [
-                '/assets/imgs/phillblack/phillblack1.jpeg',
-                '/assets/imgs/phillblack/phillblack2.jpeg',
-                '/assets/imgs/phillblack/phillblack1.jpeg',
-                '/assets/imgs/phillblack/phillblack2.jpeg',
+                '/assets/imgs/nails/nails1.jpeg',
+                '/assets/imgs/nails/nails2.jpeg',
+                '/assets/imgs/nails/nails3.jpeg',
             ]
         },
         {
@@ -36,7 +34,6 @@ export function getItems(id) {
                 '/assets/imgs/phillblack/phillblack3.jpeg',
                 '/assets/imgs/phillblack/phillblack4.jpeg',
                 '/assets/imgs/phillblack/phillblack1.jpeg',
-                '/assets/imgs/phillblack/phillblack2.jpeg',
             ]
         },
         {
@@ -46,7 +43,8 @@ export function getItems(id) {
             id: 'whooshy',
             srcDetail: '/assets/imgs/whoops-detail.jpeg',
             gallery: [
-                '/assets/imgs/whoops/whoops1.jpeg',
+                '/assets/imgs/whoops/whoops3.jpeg',
+                '/assets/imgs/whoops/whoops4.jpeg',
                 '/assets/imgs/whoops/whoops2.jpeg',
             ]
         }
