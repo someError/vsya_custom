@@ -98,7 +98,7 @@ function Shopper () {
                 <SwipeNote></SwipeNote>
             </article>
             <div className={styles.buttons}>
-                <Button href={'/'}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
+                <Button href={'/'} descr={tt.delivery}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
                 <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
             </div>
         </div>

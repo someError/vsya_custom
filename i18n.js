@@ -7,6 +7,8 @@ export default {
         dev: 'development',
         detailFirst: ['All', 'in rich colors', 'saturated with mysticism and magic of minimalism'],
         detailSecond: ['Yummy', 'crispy dark matter packaging'],
+        delivery: 'world delivery',
+        mail: 'send mail',
     },
     ru: {
         buyBtn: 'смотреть эту',
@@ -16,5 +18,6 @@ export default {
         dev: 'в разработке',
         detailFirst: ['Вся', 'в сочных красках', 'пропитана мистикой и волшебством минимализма'],
         detailSecond: ['Вкусная', 'упаковка из хрустящей темной материи'],
+        mail: 'отправить письмо'
     }
 }

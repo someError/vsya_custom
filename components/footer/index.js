@@ -3,7 +3,6 @@ import cn from 'classnames'
 import {useState, useContext} from "react";
 import {useSwipeable} from "react-swipeable";
 import Context from "../../appContext";
-import Creepy from "../creepy";
 
 function Footer (props) {
     const appState = useContext(Context);

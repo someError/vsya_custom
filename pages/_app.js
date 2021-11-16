@@ -8,9 +8,13 @@ import {useState ,useContext, createContext} from "react";
 import {useSwipeable} from "react-swipeable";
 import Header from '../components/header'
 import Context from "../appContext";
+import {useRouter} from "next/router";
+import i18n from "../i18n";
 
 
 function MyApp({ Component, pageProps }) {
+    const router = useRouter()
+    const tt = i18n[router.locale]
     const [footer, setFooter] = useState(false);
     const [footerContext, setFooterContext] = useState(false);
     const [footerAppHandlerEnabled, setFooterAppHandlerEnabled] = useState(true);
@@ -35,14 +39,14 @@ function MyApp({ Component, pageProps }) {
                     <FiInstagram></FiInstagram>
                     <div className={styles.footerRowInst}>
                         <div>vsya_custom</div>
-                        <div>Instagram.com</div>
+                        <div>instagram.com</div>
                     </div>
                 </a>
                 <a href="mailto:redrows@gmail.com" target={'_blank'} className={styles.footerRow}>
                     <FiMail></FiMail>
                     <div className={styles.footerRowInst}>
                         <div>vsya_custom@gmail.com</div>
-                        <div>Отправить письмо</div>
+                        <div>{tt.mail}</div>
                     </div>
                 </a>
             </div></Footer>
