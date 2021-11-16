@@ -7,6 +7,8 @@ export function getItems(id) {
             id: 'sadako',
             srcDetail: '/assets/imgs/sadako-detail.jpeg',
             gallery: [
+                '/assets/imgs/sadako/sadako3.jpeg',
+                '/assets/imgs/sadako/sadako4.jpeg',
                 '/assets/imgs/phillblack/phillblack1.jpeg',
                 '/assets/imgs/phillblack/phillblack2.jpeg',
             ]
@@ -20,6 +22,8 @@ export function getItems(id) {
             gallery: [
                 '/assets/imgs/phillblack/phillblack1.jpeg',
                 '/assets/imgs/phillblack/phillblack2.jpeg',
+                '/assets/imgs/phillblack/phillblack1.jpeg',
+                '/assets/imgs/phillblack/phillblack2.jpeg',
             ]
         },
         {
@@ -29,6 +33,8 @@ export function getItems(id) {
             id: 'phillblack',
             srcDetail: '/assets/imgs/rahataha-detail.jpeg',
             gallery: [
+                '/assets/imgs/phillblack/phillblack3.jpeg',
+                '/assets/imgs/phillblack/phillblack4.jpeg',
                 '/assets/imgs/phillblack/phillblack1.jpeg',
                 '/assets/imgs/phillblack/phillblack2.jpeg',
             ]
