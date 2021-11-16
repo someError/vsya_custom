@@ -15,6 +15,7 @@ import {useSwipeable} from "react-swipeable";
 import cn from 'classnames'
 import Context from "../../appContext";
 import SwipeNote from "../../components/swipeNote";
+import i18n from "../../i18n";
 
 function Shopper () {
     const appState = useContext(Context);
@@ -23,7 +24,9 @@ function Shopper () {
     //     return () => appState.setFooterAppHandlerEnabled(true);
     // }, []);
 
-    const { query: { id } } = useRouter();
+    const router = useRouter();
+    const { query: { id } } = router;
+    const tt = i18n[router.locale]
     const tote = getItems(id);
     const [showGallery, setShowGallery] = useState(false)
     const handlers = useSwipeable({
@@ -61,8 +64,8 @@ function Shopper () {
                     {/*<p><i><Creepy>👜</Creepy></i><Creepy>🕶</Creepy><span>Вся</span> уникальная и непохожая ни на одну другую.</p>*/}
                     {/*<p><i><Creepy>🎨</Creepy></i><i><Creepy>🌶️</Creepy></i><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>*/}
                     {/*<p><i><Creepy>🔥</Creepy></i><i><Creepy>🕶</Creepy></i><span>Вся</span> образцово прошита ии..ии упакована в крутой черный мат.</p>*/}
-                    <p><span>Вся</span> в сочных красках <i><Creepy>🎨</Creepy><Creepy>🌶️</Creepy></i>, пропитана мистикой и волшебством минимализма.</p>
-                    <p><span>Вкусная</span> упаковка из хрустящей темной материи <i><Creepy>🌒</Creepy></i> </p>
+                    <p><span>{tt.detailFirst[0]}</span> {tt.detailFirst[1]} <i><Creepy>🎨</Creepy><Creepy>🌶️</Creepy></i>, {tt.detailFirst[2]}.</p>
+                    <p><span>{tt.detailSecond[0]}</span> {tt.detailSecond[1]} <i><Creepy>🌒</Creepy></i> </p>
                     {/*<p><span>Вся</span> в сочных, сверхъярких красках.</p>*/}
                     {/*<p>Эта картина  парам пам пам пам тара рам</p>*/}
                     {/*<p>Стильная упаковка из крутого чернорго мата</p>*/}
@@ -95,8 +98,8 @@ function Shopper () {
                 <SwipeNote></SwipeNote>
             </article>
             <div className={styles.buttons}>
-                <Button href={'/'}>Заказать через instgrm <FaInstagram></FaInstagram></Button>
-                <Button disabled href={'/'} descr={'в разработке'}>Купить онлайн crypto<FaBitcoin /></Button>
+                <Button href={'/'}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
+                <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
             </div>
         </div>
         {/*<div className={styles.blackMask}></div>*/}
