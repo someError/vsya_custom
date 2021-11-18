@@ -94,6 +94,7 @@ function Slider() {
                         {/*}}*/}
                         {/*       src={item.src} alt=""*/}
                         {/*/>*/}
+                        <div className={cn('blob', styles.blob)}></div>
                         <motion.img
                             // onLoad={e => {
                             //     if (!isImgsLoading) {

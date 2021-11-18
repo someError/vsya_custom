@@ -110,18 +110,26 @@
 
 .chat {
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
 }
 
 .chat p {
-    font-size: .75rem;
-    max-width: 80%;
-    padding-top: 3px;
+    /*font-size: .75rem;*/
+    /*max-width: 80%;*/
     color: antiquewhite;
     /*color: #000000;*/
     border-radius: 5px;
     position: relative;
-    padding-left: 40px;
+    letter-spacing: 3px;
+    line-height: 1.25;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.chat {
+    font-family: 'cutenes_monsterregular', sans-serif;
+    font-size: 1.25rem;
+    color: #9c261a;
 }
 
 .chat b {
@@ -136,10 +144,6 @@
     align-items: center;
     justify-content: center;
     background: antiquewhite;
-}
-
-.chat b img {
-    max-width: 40px;
 }
 
 /*.chat p:first-of-type {*/
@@ -171,6 +175,40 @@
     width: 100%;
     background-position: center;
     background-size: cover;
+}
+
+.blob {
+    opacity: .9;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    /*background: transparent;*/
+    color: #000;
+    background: #fff;
+    margin: 0;
+    /*background: rgba(219, 55, 39, 0.7);*/
+}
+
+.blobWrap, .blobWrapRight {
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    width: auto;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blobWrap {
+    left: 5px;
+}
+
+.blobWrapRight {
+    right: 20px;
 }
 
 
@@ -287,12 +325,6 @@
     position: absolute;
 }
 
-/*.glitch .glitch__item:nth-child(1) {*/
-/*    filter: grayscale(100);*/
-/*}*/
-
-
-
 
 .glitch .glitch__item:nth-child(n+2) {
     opacity: 0;
@@ -321,6 +353,8 @@
     background-blend-mode: var(--blend-mode-5);
     animation-name: glitch-anim-flash;
 }
+
+
 @keyframes glitch-anim-flash {
     0%, 5% {
         opacity: 0.2;

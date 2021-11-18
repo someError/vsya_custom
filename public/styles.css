@@ -126,7 +126,8 @@ body {
 
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 15px rgba(0219, 55, 39, 0);
+        box-shadow: 0 0 0 15px rgba(219, 55, 39, 0);
+        /*color: transparent;*/
     }
 
     100% {

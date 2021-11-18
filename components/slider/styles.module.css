@@ -137,22 +137,31 @@
 /*    transform: translateY(-831px);*/
 /*}*/
 
-.img:after, .img:before {
-    content: '';
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0 rgba(219, 55, 39, 1);
-    margin: 10px;
-    height: 20px;
-    width: 20px;
-    transform: scale(1);
-    animation: pulse-black 2s infinite;
-    opacity: 0;
+/*.img:after, .img:before {*/
+/*    content: '';*/
+/*    background: transparent;*/
+/*    border-radius: 50%;*/
+/*    box-shadow: 0 0 0 0 rgba(219, 55, 39, 1);*/
+/*    margin: 10px;*/
+/*    height: 20px;*/
+/*    width: 20px;*/
+/*    transform: scale(1);*/
+/*    animation: pulse-black 2s infinite;*/
+/*    opacity: 0;*/
+/*    position: absolute;*/
+/*    right: -30px;*/
+/*    top: 70%;*/
+/*    transition: none;*/
+/*    z-index: 999;*/
+/*}*/
+
+.blob {
     position: absolute;
-    right: -30px;
-    top: 70%;
-    transition: none;
-    z-index: 999;
+    top: 50%;
+    left: calc(50% - 20px);
+    z-index: 9;
+    opacity: 0;
+    background: transparent;
 }
 
 .img img {
@@ -404,6 +413,11 @@
     transform: scale(.9) translate(140px, -20px);
 }
 
+.slider-0 .img:nth-child(2) .blob, .slider-0 .img:nth-child(4) .blob {
+    opacity: 1;
+}
+
+
 .slider-1 .img:nth-child(1) {
     position: absolute;
     transform: scale(.9) translate(-140px, -20px);
@@ -415,6 +429,11 @@
     transform: scale(.9) translate(140px, -20px);
     z-index: 2;
 }
+
+.slider-1 .img:nth-child(1) .blob, .slider-1 .img:nth-child(3) .blob {
+    opacity: 1;
+}
+
 
 .slider-1 .img:nth-child(4) {
     position: absolute;
@@ -434,6 +453,11 @@
     z-index: 2;
 }
 
+.slider-2 .img:nth-child(2) .blob, .slider-2 .img:nth-child(4) .blob {
+    opacity: 1;
+}
+
+
 .slider-2 .img:nth-child(1) {
     position: absolute;
     transform: scale(.7) translateY(-160px);
@@ -450,6 +474,10 @@
     position: absolute;
     transform: scale(.9) translate(140px, -20px);
     z-index: 2;
+}
+
+.slider-3 .img:nth-child(1) .blob, .slider-3 .img:nth-child(3) .blob {
+    opacity: 1;
 }
 
 .slider-3 .img:nth-child(2) {

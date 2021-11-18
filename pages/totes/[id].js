@@ -9,12 +9,14 @@ import {useScript} from "../../hooks/useScript";
 import Creepy from "../../components/creepy";
 import { GiGalaxy } from 'react-icons/gi'
 import { FaBitcoin, FaInstagram } from 'react-icons/fa'
+import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
+import { MdOutlinePhoto } from 'react-icons/md'
+import { GrFormClose } from 'react-icons/Gr'
 import Button from '../../components/button'
 import DetailSlider from "../../detailSlider";
 import {useSwipeable} from "react-swipeable";
 import cn from 'classnames'
 import Context from "../../appContext";
-import SwipeNote from "../../components/swipeNote";
 import i18n from "../../i18n";
 
 function Shopper () {
@@ -30,20 +32,28 @@ function Shopper () {
     const tote = getItems(id);
     const [showGallery, setShowGallery] = useState(false)
     const handlers = useSwipeable({
-        onSwipedLeft: () => {
-            appState.setFooterAppHandlerEnabled(false)
-            setShowGallery(true)
-        },
-        onSwipedRight: () => {
-            appState.setFooterAppHandlerEnabled(true)
-            setShowGallery(false)
-        }
+        onSwipedLeft: _showGallery,
+        onSwipedRight: _hideGallery
     });
 
     const contentHandlers = useSwipeable({
         onSwipedUp: () => appState.setFooterContext(true),
         onSwipedDown: () => appState.setFooterContext(false)
     });
+
+    function _showGallery () {
+        appState.setFooterAppHandlerEnabled(false)
+        setShowGallery(true)
+    }
+
+    function _hideGallery () {
+        appState.setFooterAppHandlerEnabled(true)
+        setShowGallery(false)
+    }
+
+    function _toggleGallery () {
+        showGallery ? _hideGallery() : _showGallery()
+    }
 
 
 
@@ -75,6 +85,12 @@ function Shopper () {
         </div>
         <div className={styles.title}><Creepy><span>{tote.name}</span><span>{tote.name2}</span></Creepy></div>
         <div className={styles.glitchWrap}>
+            <Creepy className={styles.blobWrap} onClick={() => showGallery ? _hideGallery() : router.push('/')}><div className={cn('blob', styles.blob)}><BiChevronsLeft></BiChevronsLeft></div></Creepy>
+            <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
+                <div className={cn('blob', styles.blob)}>
+                    { showGallery ? <GrFormClose /> : <MdOutlinePhoto /> }
+                </div>
+            </Creepy>
             <div className={styles.glitch}>
                 {
                     [...Array(5).keys()].map(i => <div
@@ -88,15 +104,22 @@ function Shopper () {
             <div>Галерея</div>
         </div>
         <div className={'wrapper'}>
+            <article className={cn(styles.article, styles.chat)}>
+                {/*<p>Black Phillip, Black Phillip <br/>*/}
+                {/*    A crown grows out his head, <br/>*/}
+                {/*    Black Phillip, Black Phillip <br/>*/}
+                {/*    To nanny queen is wed.</p>*/}
+
+                <p>
+                    but the morning light <br/> shows who I really am,<br/> yet I want to say this <br/> - I love you.
+                </p>
+                {/*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
+                {/*<p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>*/}
+            </article>
             {/*<article className={cn(styles.article, styles.chat)}>*/}
-            {/*    <p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
+            {/*    /!*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*!/*/}
             {/*    <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>*/}
             {/*</article>*/}
-            <article className={cn(styles.article, styles.chat)}>
-                {/*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
-                <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>
-                <SwipeNote></SwipeNote>
-            </article>
             <div className={styles.buttons}>
                 <Button href={'/'} descr={tt.delivery}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
                 <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>

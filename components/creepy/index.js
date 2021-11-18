@@ -1,9 +1,12 @@
 import styles from './styles.module.css'
 import cn from 'classnames'
 function Creepy (props) {
+    const _props = {
+        onClick: props.onClick
+    }
     return (
         <>
-            <div className={cn(styles.root, props.className)}>
+            <div className={cn(styles.root, props.className)} {..._props}>
                 {/*<p>Ты</p>*/}
                 {/*<p className={styles.small}>точно знаешь</p>*/}
                 {/*<p>что</p>*/}
