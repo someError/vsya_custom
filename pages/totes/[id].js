@@ -109,7 +109,6 @@ function Shopper () {
                 {/*    A crown grows out his head, <br/>*/}
                 {/*    Black Phillip, Black Phillip <br/>*/}
                 {/*    To nanny queen is wed.</p>*/}
-
                 <p>
                     but the morning light <br/> shows who I really am,<br/> yet I want to say this <br/> - I love you.
                 </p>
