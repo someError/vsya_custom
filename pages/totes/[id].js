@@ -10,8 +10,7 @@ import Creepy from "../../components/creepy";
 import { GiGalaxy } from 'react-icons/gi'
 import { FaBitcoin, FaInstagram } from 'react-icons/fa'
 import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
-import { MdOutlinePhoto } from 'react-icons/md'
-import { GrFormClose } from 'react-icons/Gr'
+import { MdOutlinePhoto, MdClose } from 'react-icons/md'
 import Button from '../../components/button'
 import DetailSlider from "../../detailSlider";
 import {useSwipeable} from "react-swipeable";
@@ -88,7 +87,7 @@ function Shopper () {
             <Creepy className={styles.blobWrap} onClick={() => showGallery ? _hideGallery() : router.push('/')}><div className={cn('blob', styles.blob)}><BiChevronsLeft></BiChevronsLeft></div></Creepy>
             <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
                 <div className={cn('blob', styles.blob)}>
-                    { showGallery ? <GrFormClose /> : <MdOutlinePhoto /> }
+                    { showGallery ? <MdClose /> : <MdOutlinePhoto /> }
                 </div>
             </Creepy>
             <div className={styles.glitch}>
