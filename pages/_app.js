@@ -18,12 +18,15 @@ function MyApp({ Component, pageProps }) {
     const [footer, setFooter] = useState(false);
     const [footerContext, setFooterContext] = useState(false);
     const [footerAppHandlerEnabled, setFooterAppHandlerEnabled] = useState(true);
+    const [curItemIndex, setCurItemIndex] = useState(2);
 
     const contextState = {
         footerAppHandlerEnabled,
         setFooterAppHandlerEnabled,
         footerContext,
-        setFooterContext
+        setFooterContext,
+        curItemIndex,
+        setCurItemIndex
     }
 
     const handlers = useSwipeable({

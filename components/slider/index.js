@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 import cn from "classnames";
 import styles from "./styles.module.css";
 import Image from "next/image";
@@ -11,9 +11,13 @@ import Creepy from "../creepy";
 import {getItems} from "../../utils";
 import {motion} from "framer-motion";
 import LoadingScreen from "../loadingScreen";
+import Context from "../../appContext";
 
 
 function Slider() {
+    const { curItemIndex, setCurItemIndex } = useContext(Context);
+    const cur = curItemIndex;
+
     const router = useRouter();
     const handlers = useSwipeable({
         onSwipedLeft: () => {
@@ -34,14 +38,22 @@ function Slider() {
     const items = getItems();
 
     const [titleActive, setTitleActive] = useState(true);
-    const [cur, setCur] = useState(0);
+    // const [cur, setCur] = useState(2);
     const [leftDir, setDir] = useState(false);
     const [isImgsLoading, setIsImgsLoading] = useState(false);
+
+    let lineTranslatePercent = (1 - items[cur].cnt / 7) * 100;
+    // lineTranslatePercent = lineTranslatePercent === 1 ? 0 : lineTranslatePercent * 100;
+
     let loadingImgsCnt = 0;
+
+
+
 
     function _setCur(cur) {
         setTitleActive(false);
-        setCur(cur);
+        // setCur(cur);
+        setCurItemIndex(cur);
         setTimeout(() => setTitleActive(true), 200)
     }
 
@@ -55,13 +67,13 @@ function Slider() {
         <div className={cn(styles.content, {[styles.contentActive]: isImgsLoading})}>
             <div className={cn(styles.picassoWrap, styles[`picassoWrap${cur}`])}>
                 <div className={styles.picassoTitle}>
-                    <div><GiPaintBrush/></div>
-                    <span className={styles.picassoDescr}>{i18n[router.locale].picasso}</span>
-                    <div className={styles.picassoCnt}><span>173</span> / 177</div>
+                    {/*<div><GiPaintBrush/></div>*/}
+                    {/*<span className={styles.picassoDescr}>{i18n[router.locale].picasso}</span>*/}
+                    <div className={styles.picassoCnt}><span>{items[cur].cnt}</span> <i>/</i> 7</div>
                 </div>
                 <div className={styles.picasso}>
                     <div>
-                        <div className={styles.picassoLine}></div>
+                        <div className={styles.picassoLine} style={{transform: `translateX(${-lineTranslatePercent}%)`}} />
                     </div>
                 </div>
             </div>

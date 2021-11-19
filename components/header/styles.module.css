@@ -23,3 +23,22 @@
 .logo img {
     height: 100%;
 }
+
+.title {
+    /*font-family: 'cutenes_monsterregular', sans-serif;*/
+    font-size: 1rem;
+    line-height: 1;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 999;
+    font-weight: 100;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    /*text-transform: uppercase;*/
+}
+
+.title span {
+    color: var(--clr3);
+}

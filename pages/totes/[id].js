@@ -20,25 +20,19 @@ import i18n from "../../i18n";
 
 function Shopper () {
     const appState = useContext(Context);
-    // useEffect(() => {
-    //     appState.setFooterAppHandlerEnabled(false);
-    //     return () => appState.setFooterAppHandlerEnabled(true);
-    // }, []);
-
     const router = useRouter();
     const { query: { id } } = router;
-    const tt = i18n[router.locale]
     const tote = getItems(id);
-    const [showGallery, setShowGallery] = useState(false)
     const handlers = useSwipeable({
         onSwipedLeft: _showGallery,
         onSwipedRight: _hideGallery
     });
-
     const contentHandlers = useSwipeable({
         onSwipedUp: () => appState.setFooterContext(true),
         onSwipedDown: () => appState.setFooterContext(false)
     });
+    const tt = i18n[router.locale]
+    const [showGallery, setShowGallery] = useState(false)
 
     function _showGallery () {
         appState.setFooterAppHandlerEnabled(false)
@@ -54,9 +48,9 @@ function Shopper () {
         showGallery ? _hideGallery() : _showGallery()
     }
 
-
-
-    // const
+    useEffect(() => {
+        appState.setCurItemIndex(tote.index || appState.curItemIndex);
+    }, [tote]);
 
     return <div className={styles.root} {...handlers}>
         <div className={cn(styles.details, {[styles.detailsShow]: showGallery})}>
@@ -73,8 +67,8 @@ function Shopper () {
                     {/*<p><i><Creepy>👜</Creepy></i><Creepy>🕶</Creepy><span>Вся</span> уникальная и непохожая ни на одну другую.</p>*/}
                     {/*<p><i><Creepy>🎨</Creepy></i><i><Creepy>🌶️</Creepy></i><span>Вся</span> в сочных и бесстрашных перед стиркой красках.</p>*/}
                     {/*<p><i><Creepy>🔥</Creepy></i><i><Creepy>🕶</Creepy></i><span>Вся</span> образцово прошита ии..ии упакована в крутой черный мат.</p>*/}
-                    <p><span>{tt.detailFirst[0]}</span> {tt.detailFirst[1]} <i><Creepy>🎨</Creepy><Creepy>🌶️</Creepy></i>, {tt.detailFirst[2]}.</p>
-                    <p><span>{tt.detailSecond[0]}</span> {tt.detailSecond[1]} <i><Creepy>🌒</Creepy></i> </p>
+                    <p><span>{tt.detailFirst[0]}</span> {tt.detailFirst[1]} <i><Creepy className={styles.inline}>🎨</Creepy ><Creepy className={styles.inline}>🌶️</Creepy></i>, {tt.detailFirst[2]}.</p>
+                    <p><span>{tt.detailSecond[0]}</span> {tt.detailSecond[1]} <i><Creepy className={styles.inline}>🌒</Creepy></i> </p>
                     {/*<p><span>Вся</span> в сочных, сверхъярких красках.</p>*/}
                     {/*<p>Эта картина  парам пам пам пам тара рам</p>*/}
                     {/*<p>Стильная упаковка из крутого чернорго мата</p>*/}
@@ -84,12 +78,6 @@ function Shopper () {
         </div>
         <div className={styles.title}><Creepy><span>{tote.name}</span><span>{tote.name2}</span></Creepy></div>
         <div className={styles.glitchWrap}>
-            <Creepy className={styles.blobWrap} onClick={() => showGallery ? _hideGallery() : router.push('/')}><div className={cn('blob', styles.blob)}><BiChevronsLeft></BiChevronsLeft></div></Creepy>
-            <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
-                <div className={cn('blob', styles.blob)}>
-                    { showGallery ? <MdClose /> : <MdOutlinePhoto /> }
-                </div>
-            </Creepy>
             <div className={styles.glitch}>
                 {
                     [...Array(5).keys()].map(i => <div
@@ -100,7 +88,12 @@ function Shopper () {
                     />)
                 }
             </div>
-            <div>Галерея</div>
+            <Creepy className={styles.blobWrap} onClick={() => showGallery ? _hideGallery() : router.push('/')}><div className={cn('blob', styles.blob)}><BiChevronsLeft></BiChevronsLeft></div></Creepy>
+            <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
+                <div className={cn('blob', styles.blob)}>
+                    { showGallery ? <MdClose /> : <MdOutlinePhoto /> }
+                </div>
+            </Creepy>
         </div>
         <div className={'wrapper'}>
             <article className={cn(styles.article, styles.chat)}>
@@ -119,7 +112,7 @@ function Shopper () {
             {/*    <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>*/}
             {/*</article>*/}
             <div className={styles.buttons}>
-                <Button href={'/'} descr={tt.delivery}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
+                <Button href={'/'} descrTop={tt.delivery} descr={tt.priceDescr}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
                 <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
             </div>
         </div>

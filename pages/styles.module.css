@@ -191,7 +191,11 @@
     color: #9c261a;
     font-weight: 700;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.footerRow:last-of-type {
+    margin-bottom: 0;
 }
 
 .footerRow svg {
@@ -228,5 +232,22 @@
     100% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 rgba(219, 55, 39, 0);
+    }
+}
+
+@keyframes pulse-white {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     }
 }

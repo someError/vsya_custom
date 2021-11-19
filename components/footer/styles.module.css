@@ -17,9 +17,12 @@
 .mask {
     background: #000;
     opacity: 0;
-    height: 50vh;
+    position: absolute;
     z-index: 2;
-    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
     transition: none;
     cursor: pointer;
 }
@@ -30,22 +33,30 @@
 }
 
 .content {
-    height: 50vh;
+    height: auto;
+    bottom: 20px;
     padding: 20px;
     box-sizing: border-box;
     /*opacity: .95;*/
     background: #fff;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, .9);
-    position: relative;
+    position: absolute;
     z-index: 3;
     width: 94vw;
+    font-size: .875rem;
 }
 
 .blob {
     width: 30px;
     height: 30px;
-    opacity: .7;
+    opacity: .8;
+    color: antiquewhite;
+    font-size: .875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .blobWrapper {
@@ -59,6 +70,9 @@
 }
 
 .root.active .blobWrapper {
-    top: 25vh;
+    top: calc(50% - 45px);
     transition: none;
+}
+.root.active .blobWrapper > div {
+    opacity: .8!important;
 }

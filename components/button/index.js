@@ -6,6 +6,7 @@ function Btn(props) {
         <a className={cn(styles.root, props.className, {[styles.disabled]: props.disabled})}>
             { props.children }
             { props.descr && <div className={styles.descr}>{props.descr}</div> }
+            { props.descrTop && <div className={styles.descrTop}><span>{props.descrTop}</span></div> }
         </a>
     </Link>
 }

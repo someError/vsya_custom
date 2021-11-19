@@ -3,6 +3,7 @@ import cn from 'classnames'
 import {useState, useContext} from "react";
 import {useSwipeable} from "react-swipeable";
 import Context from "../../appContext";
+import {MdClose} from "react-icons/md";
 
 function Footer (props) {
     const appState = useContext(Context);
@@ -18,7 +19,7 @@ function Footer (props) {
         <div className={styles.blobWrapper} onClick={() => {
             appState.setFooterContext(!props.active);
             props.setActive(!props.active)
-        }}><div className={cn('blob', styles.blob)}/></div>
+        }}><div className={cn('blob', styles.blob)}></div></div>
         <div className={styles.mask} onClick={handleClose} />
         <div className={styles.content}>{ props.children }</div>
     </div>

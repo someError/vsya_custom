@@ -23,7 +23,7 @@
     margin: 5vh 0 0;
     padding: 0 40px;
     color: var(--clr0);
-    transform: rotate(10deg) translate(10px, 0px);
+    /*transform: rotate(10deg) translate(10px, 0px);*/
 }
 
 .picassoWrap0 {
@@ -64,9 +64,9 @@
     letter-spacing: 1px;
     font-size: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
-    margin: 0 20px 10px;
+    margin: 0 20px 5px;
     position: relative;
 }
 
@@ -96,18 +96,25 @@
 }
 
 .picassoCnt span {
-    font-size: 1.75rem;
+    font-size: 2em;
     color: antiquewhite!important;
+}
+
+.picassoCnt i {
+    font-style: normal;
+    color: antiquewhite;
 }
 
 
 .picasso {
     position: relative;
-    border: solid 3px #9c261a;
+    border: solid 3px tomato!important;
     background: transparent;
     border-radius: 10px;
     opacity: .9;
     transform: scale(.85);
+    max-width: 260px;
+    margin: auto;
 }
 
 .picasso > div {
@@ -122,7 +129,7 @@
     height: 10px;
     width: 100%;
     border-radius: 5px;
-    transform: translateX(-15px);
+    transition: transform .25s ease-in-out;
 }
 
 /*.slider-1 {*/
@@ -307,7 +314,8 @@
 
 .title > div {
     /*display: inline-flex;*/
-    transform: rotate(10deg) translate(10px , 6px);
+    transform: translateY(5px);
+    /*transform: rotate(10deg) translate(10px , 6px);*/
 }
 
 .title span:last-of-type {
