@@ -7,7 +7,7 @@ export function getItems(id) {
             name2: 'ako',
             id: 'sadako',
             srcDetail: '/assets/imgs/sadako-detail.jpeg',
-            cnt: 1,
+            cnt: 7,
             gallery: [
                 '/assets/imgs/sadako/sadako3.jpeg',
                 '/assets/imgs/sadako/sadako4.jpeg',
@@ -20,7 +20,7 @@ export function getItems(id) {
             name: 'nail',
             name2: 's',
             id: 'nails',
-            cnt: 3,
+            cnt: 7,
             srcDetail: '/assets/imgs/nails-detail.jpeg',
             gallery: [
                 '/assets/imgs/nails/nails1.jpeg',
@@ -49,7 +49,7 @@ export function getItems(id) {
             name2: 'shy',
             id: 'whooshy',
             srcDetail: '/assets/imgs/whoops-detail.jpeg',
-            cnt: 5,
+            cnt: 7,
             gallery: [
                 '/assets/imgs/whoops/whoops3.jpeg',
                 '/assets/imgs/whoops/whoops4.jpeg',
