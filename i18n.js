@@ -2,7 +2,7 @@ export default {
     en: {
         buyBtn: 'watch this',
         picasso: 'Total totes',
-        orderInst: 'order via',
+        orderInst: 'order in',
         buyCrypto: 'buy online with',
         dev: 'development',
         detailFirst: ['All', 'in rich colors', 'saturated with mysticism and magic of minimalism'],
@@ -12,7 +12,8 @@ export default {
         mail: 'send mail',
         collections: {
             sd: ['sweet', 'dreams']
-        }
+        },
+        hashtag: '#custom'
     },
     ru: {
         buyBtn: 'смотреть эту',
@@ -27,6 +28,7 @@ export default {
         mail: 'отправить письмо',
         collections: {
             sd: ['сладкие', 'сны']
-        }
+        },
+        hashtag: '#кастом'
     }
 }

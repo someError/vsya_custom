@@ -40,6 +40,7 @@
     bottom: -20px;
     letter-spacing: 1px;
     left: 0;
+    line-height: 1;
     /*opacity: .8;*/
 }
 
@@ -54,7 +55,6 @@
     top: -20px;
     letter-spacing: 1px;
     left: 0;
-    background: #000;
     /*opacity: .8;*/
 }
 

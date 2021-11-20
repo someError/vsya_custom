@@ -72,7 +72,7 @@ body {
 
 .slick-list {
     overflow: visible!important;
-    transform: translateY(-60vw)!important;
+    transform: translateY(-63vw)!important;
 }
 
 /*!* slide when not active/center*! .slick-slide[aria-hidden="false"]{*/
