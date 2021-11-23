@@ -8,6 +8,7 @@
     transition: .35s ease-out .1s;
     transform: translateY(100%);
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .root.active {
@@ -35,7 +36,7 @@
 .content {
     height: auto;
     bottom: 3vw;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
     /*opacity: .95;*/
     background: #fff;
@@ -64,13 +65,13 @@
     transition: .15s ease-out .45s;
     position: absolute;
     top: -35px;
-    left: calc(50% - 45px);
+    left: calc(50% - 35px);
     cursor: pointer;
     padding: 10px;
 }
 
 .root.active .blobWrapper {
-    top: calc(50% - 45px);
+    top: calc(50% - 35px);
     transition: none;
 }
 .root.active .blobWrapper > div {

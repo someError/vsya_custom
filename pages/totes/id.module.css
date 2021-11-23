@@ -78,6 +78,7 @@
     letter-spacing: 1px;
     font-size: .825rem;
     /*opacity: .8;*/
+    /*font-family: 'vampire95', sans-serif;*/
 }
 
 .details .article {
@@ -100,6 +101,7 @@
     margin: 0 -20px;
     padding: 10px 20px;
     height: 50vh;
+    max-width: 390px;
 }
 
 
@@ -113,6 +115,8 @@
 .chat {
     display: flex;
     flex-direction: column;
+    margin-top: -40px;
+    position: relative;
 }
 
 .chat p {
@@ -126,6 +130,7 @@
     line-height: 1.25;
     margin: 0 auto;
     text-align: center;
+    font-family: 'cutenes_monsterregular', sans-serif;
 }
 
 .cost {
@@ -135,7 +140,6 @@
 }
 
 .chat {
-    font-family: 'cutenes_monsterregular', sans-serif;
     font-size: 1.25rem;
     color: #9c261a;
 }
@@ -202,7 +206,6 @@
 
 .blobWrap, .blobWrapRight {
     position: absolute;
-    bottom: -10px;
     z-index: 999;
     width: 40px;
     height: 40px;
@@ -213,15 +216,18 @@
 }
 
 .blobWrap {
-    left: 25px;
+    top: 40%;
+    left: 20px;
 }
 
 .blobWrapRight {
-    right: 30px;
+    right: 20px;
+    bottom: 10px;
 }
 
 
 .root {
+    position: relative;
     --color-text: #fff;
     --color-bg: #000;
     --color-link: #f9d77e;
@@ -266,15 +272,16 @@
     font-size: 2rem;
     color: #fff;
     text-transform: uppercase;
-    transform: translate(-20vw, 5px);
+    transform: translate(8vw, 5px);
     position: relative;
     z-index: 99;
+    display: inline-flex;
 }
 
 .glitch {
     width: 90vw;
     left: 5vw;
-    height: 50vh;
+    height: calc(100vh - 200px);
     max-width: 100%;
     position: relative;
     display: flex;

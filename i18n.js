@@ -7,8 +7,8 @@ export default {
         dev: 'development',
         detailFirst: ['All', 'in rich colors', 'saturated with mysticism and magic of minimalism'],
         detailSecond: ['Yummy', 'crispy dark matter packaging'],
-        delivery: '10$ world shipping',
-        priceDescr: 'the work price - 20$',
+        delivery: 'the work price - 20$',
+        priceDescr: '10$ world shipping',
         mail: 'send mail',
         collections: {
             sd: ['sweet', 'dreams']
@@ -23,8 +23,8 @@ export default {
         dev: 'в разработке',
         detailFirst: ['Вся', 'в сочных красках', 'пропитана мистикой и волшебством минимализма'],
         detailSecond: ['Вкусная', 'упаковка из хрустящей темной материи'],
-        priceDescr: 'цена работы - 1490р',
-        delivery: '10% скидка подписчикам',
+        priceDescr: 'скидки подписчикам',
+        delivery: 'цена работы - 1490р',
         mail: 'отправить письмо',
         collections: {
             sd: ['сладкие', 'сны']

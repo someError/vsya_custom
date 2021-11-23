@@ -42,8 +42,8 @@ export default function DetailSlider(props) {
         </Head>
         <div className={styles.wrapper}>
             <div className={styles.sliderMask} {...handlers}>
-                <div className={styles.sliderMaskTop} onClick={() => sliderRef.current && sliderRef.current.slickPrev()}/>
-                <div className={styles.sliderMaskBot} onClick={() => sliderRef.current && sliderRef.current.slickNext()}/>
+                <div className={styles.sliderMaskTop} onClick={() => sliderRef.current && sliderRef.current.slickPrev()}><div className={'blob'} /></div>
+                <div className={styles.sliderMaskBot} onClick={() => sliderRef.current && sliderRef.current.slickNext()}><div className={'blob'} /></div>
             </div>
             <Slider ref={sliderRef} className={styles.slider} {...settings}>
                 {

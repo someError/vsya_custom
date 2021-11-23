@@ -12,7 +12,10 @@ export function getItems(id) {
                 '/assets/imgs/sadako/sadako3.jpeg',
                 '/assets/imgs/sadako/sadako4.jpeg',
                 '/assets/imgs/sadako/sadako1.jpeg',
-            ]
+                '/assets/imgs/sadako/sadako5.jpeg',
+            ],
+            descr: ['She is', 'too CUTE to spook'],
+            descrRu: ['Слишком милая', 'чтобы напугать'],
         },
         {
             index: 1,
@@ -26,7 +29,10 @@ export function getItems(id) {
                 '/assets/imgs/nails/nails1.jpeg',
                 '/assets/imgs/nails/nails2.jpeg',
                 '/assets/imgs/nails/nails3.jpeg',
-            ]
+                '/assets/imgs/nails/nails5.jpeg',
+            ],
+            descr: ['I admit,', ' I’m a little wicked'],
+            descrRu: ['Я признаю,', 'Я бываю немного злой'],
         },
         {
             index: 2,
@@ -40,7 +46,10 @@ export function getItems(id) {
                 '/assets/imgs/phillblack/phillblack3.jpeg',
                 '/assets/imgs/phillblack/phillblack4.jpeg',
                 '/assets/imgs/phillblack/phillblack1.jpeg',
-            ]
+                '/assets/imgs/phillblack/phillblack5.jpeg',
+            ],
+            descr: ['Don’t keep calm', 'I’m under your bed'],
+            descrRu: ['Никакого тебе спокойствия', 'я под твоей кроватью'],
         },
         {
             index: 3,
@@ -54,7 +63,10 @@ export function getItems(id) {
                 '/assets/imgs/whoops/whoops3.jpeg',
                 '/assets/imgs/whoops/whoops4.jpeg',
                 '/assets/imgs/whoops/whoops2.jpeg',
-            ]
+                '/assets/imgs/whoops/whooshy5.jpeg',
+            ],
+            descr: ['The only ghost', ' that lives here', 'is the HOLY ghost'],
+            descrRu: ['Единственный призрак,', 'который живет здесь,', ' это Святой призрак'],
         }
     ]
 

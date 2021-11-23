@@ -11,17 +11,28 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'cm';
-    src: url('/public/assets/fonts/cm.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'cutenes_monsterregular';
     src: url('cutenesmonster-webfont.woff2') format('woff2'),
     url('cutenesmonster-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'beer_money';
+    src: url('ofont.ru_beer_money-webfont.woff2') format('woff2'),
+    url('ofont.ru_beer_money-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'suplexmentary_comic';
+    src: url('ofont.ru_suplexmentary_comic_nc-webfont.woff2') format('woff2'),
+    url('ofont.ru_suplexmentary_comic_nc-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

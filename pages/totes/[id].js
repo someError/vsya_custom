@@ -12,7 +12,7 @@ import { FaBitcoin, FaInstagram } from 'react-icons/fa'
 import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
 import { MdOutlinePhoto, MdClose } from 'react-icons/md'
 import Button from '../../components/button'
-import DetailSlider from "../../detailSlider";
+import DetailSlider from "../../components/detailSlider";
 import {useSwipeable} from "react-swipeable";
 import cn from 'classnames'
 import Context from "../../appContext";
@@ -89,35 +89,33 @@ function Shopper () {
                 }
             </div>
             <Creepy className={styles.blobWrap} onClick={() => showGallery ? _hideGallery() : router.push('/')}><div className={cn('blob', styles.blob)}><BiChevronsLeft></BiChevronsLeft></div></Creepy>
+        </div>
+        <div className={'wrapper'}>
+            <article className={cn(styles.article, styles.chat)}>
+                <p>
+                    { tote.descr && tote.descr.map(text => <DescrText>{text}</DescrText>) }
+                    {/*{*/}
+                    {/*    (tote.descr || tote.descrRu) && router.locale === 'en'*/}
+                    {/*        ? tote.descr.map(text => <DescrText>{text}</DescrText>)*/}
+                    {/*        : tote.descrRu.map(text => <DescrText>{text}</DescrText>)*/}
+                    {/*}*/}
+                </p>
+            </article>
+            <div className={styles.buttons}>
+                <Button href={'/'} descrTop={tt.delivery} descr={tt.priceDescr}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
+                <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
+            </div>
             <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
                 <div className={cn('blob', styles.blob)}>
                     { showGallery ? <MdClose /> : <MdOutlinePhoto /> }
                 </div>
             </Creepy>
         </div>
-        <div className={'wrapper'}>
-            <article className={cn(styles.article, styles.chat)}>
-                {/*<p>Black Phillip, Black Phillip <br/>*/}
-                {/*    A crown grows out his head, <br/>*/}
-                {/*    Black Phillip, Black Phillip <br/>*/}
-                {/*    To nanny queen is wed.</p>*/}
-                <p>
-                    but the morning light <br/> shows who I really am,<br/> yet I want to say this <br/> - I love you.
-                </p>
-                {/*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*/}
-                {/*<p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>*/}
-            </article>
-            {/*<article className={cn(styles.article, styles.chat)}>*/}
-            {/*    /!*<p><b><img src="/assets/imgs/portal.png" alt=""/></b><span>Доставка в любую точку мира 🛸</span> <i /></p>*!/*/}
-            {/*    <p><b><img src="/assets/imgs/constellation.png" alt=""/></b><span>Укажи свое созвездие</span></p>*/}
-            {/*</article>*/}
-            <div className={styles.buttons}>
-                <Button href={'/'} descrTop={tt.delivery} descr={tt.priceDescr}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
-                <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
-            </div>
-        </div>
-        {/*<div className={styles.blackMask}></div>*/}
     </div>
+}
+
+function DescrText (props) {
+    return <>{ props.children } <br/></>
 }
 
 /**TODO: GET STATIC PATH!!!!!*/
