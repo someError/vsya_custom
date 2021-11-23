@@ -63,7 +63,7 @@ body {
 .slick-list {
     overflow: visible!important;
     /*transform: translateY(-63vw)!important;*/
-    transform: translateY(calc((100vh / 2.5) / 5))!important;
+    transform: translateY(-38vh)!important;
 }
 
 /*@media not all and (min-resolution:.001dpcm) {*/
@@ -72,10 +72,10 @@ body {
 /*    }*/
 /*}*/
 
-.slick-current img {
+.slick-center img {
     opacity: 1!important;
     transition: .25s ease-out .15s;
-    transform: scale(1);
+    transform: scale(1.25);
     box-shadow: 3px 3px 7px rgba(0, 0, 0, .6);
     position: relative;
     z-index: 9;

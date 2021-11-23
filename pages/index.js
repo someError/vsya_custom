@@ -23,7 +23,7 @@ function Promo ({ data }) {
     //     },3000)
     // }, []);
 
-    const videoSrcs = ['/assets/imgs/redlight480.mp4', '/assets/imgs/blueloop.mp4', ]
+    const videoSrcs = ['/assets/imgs/redlight480.mp4', '/assets/imgs/blueloop2.mp4', ]
     const randVideoIndex = Math.floor(Math.random() * 2);
 
     return <div className={styles.root}>

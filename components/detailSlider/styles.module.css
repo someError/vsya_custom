@@ -5,7 +5,6 @@
     opacity: .8;
     transition: .25s ease-out .15s;
     filter: grayscale(100);
-    /*transform: scale(.95);*/
 }
 
 .sliderMask {
@@ -55,14 +54,14 @@
 }
 
 .slider {
-    height: calc(100vh - 350px);
+    height: calc(100vh - 320px);
     /*box-sizing: border-box;*/
     /*height: ;*/
-    width: calc(100vh / 2.5);
+    width: calc(55vh - 40px);
     margin: auto;
     overflow: hidden;
     border-radius: 3px;
-    /*padding: 0 10vw;*/
+    padding: 0 10vw;
     position: relative;
     /*overflow: hidden;*/
 }

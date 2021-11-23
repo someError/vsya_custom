@@ -10,13 +10,14 @@ export default function DetailSlider(props) {
     const settings = {
         // dots: true,
         arrows: false,
+
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
-        // centerMode: true,
+        centerMode: true,
     };
 
     const handlers = useSwipeable({
