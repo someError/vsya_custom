@@ -66,12 +66,11 @@
     /*overflow: hidden;*/
 }
 
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{ @media {
+@media not all and (min-resolution:.001dpcm) {
     .slider {
-        height: calc(100vh - 450px);
+        height: calc(100vh - 420px);
     }
-}}
+}
 
 .wrapper {
     position: relative;
