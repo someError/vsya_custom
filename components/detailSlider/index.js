@@ -16,7 +16,7 @@ export default function DetailSlider(props) {
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
-        centerMode: true,
+        // centerMode: true,
     };
 
     const handlers = useSwipeable({

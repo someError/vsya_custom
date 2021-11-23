@@ -5,6 +5,7 @@
     opacity: .8;
     transition: .25s ease-out .15s;
     filter: grayscale(100);
+    /*transform: scale(.95);*/
 }
 
 .sliderMask {
@@ -54,21 +55,21 @@
 }
 
 .slider {
-    height: calc(100vh - 370px);
+    height: calc(100vh - 350px);
     /*box-sizing: border-box;*/
     /*height: ;*/
-    width: calc(55vh - 40px);
+    width: calc(100vh / 2.5);
     margin: auto;
     overflow: hidden;
     border-radius: 3px;
-    padding: 0 10vw;
+    /*padding: 0 10vw;*/
     position: relative;
     /*overflow: hidden;*/
 }
 
 @media not all and (min-resolution:.001dpcm) {
     .slider {
-        height: calc(100vh - 420px);
+        height: calc(100vh - 400px);
     }
 }
 

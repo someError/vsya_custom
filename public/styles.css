@@ -60,64 +60,27 @@ body {
     animation: pulse-black 2s infinite;
 }
 
-/*.slick-current img {*/
-/*    opacity: 1!important;*/
-/*    transition: .25s ease-out .15s;*/
-/*    transform: scale(1.15);*/
-/*    box-shadow: 3px 3px 7px rgba(0, 0, 0, .6);*/
-/*    position: relative;*/
-/*    z-index: 9;*/
-/*    filter: none!important;*/
-/*}*/
-
 .slick-list {
     overflow: visible!important;
     /*transform: translateY(-63vw)!important;*/
-    transform: translateY(-40vh)!important;
+    transform: translateY(calc((100vh / 2.5) / 5))!important;
 }
 
-/*!* slide when not active/center*! .slick-slide[aria-hidden="false"]{*/
-
-/*                                      border-radius: 3px;*/
-/*                                      margin: 2px 0;*/
-/*                                      opacity: .8;*/
-/*                                      transition: .25s ease-out .15s;*/
-/*                                      filter: grayscale(100);*/
+/*@media not all and (min-resolution:.001dpcm) {*/
+/*    .slider {*/
+/*        height: calc(100vh - 400px);*/
+/*    }*/
 /*}*/
 
-/*!* slide when active/center *! .slick-slide[aria-hidden="false"] + .slick-slide[aria-hidden="false"] {*/
-/*                                   opacity: 1!important;*/
-/*                                   transition: .25s ease-out .15s;*/
-/*                                   transform: scale(1.15);*/
-/*                                   box-shadow: 3px 3px 7px rgba(0, 0, 0, .6);*/
-/*                                   position: relative;*/
-/*                                   z-index: 9;*/
-/*                                   filter: none!important;*/
-/*}*/
-
-.slick-center img {
+.slick-current img {
     opacity: 1!important;
     transition: .25s ease-out .15s;
-    transform: scale(1.15);
+    transform: scale(1);
     box-shadow: 3px 3px 7px rgba(0, 0, 0, .6);
     position: relative;
     z-index: 9;
     filter: none!important;
 }
-
-/*!* slide when not active*!*/
-/*.slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {*/
-/*    filter: grayscale(100);*/
-/*}*/
-
-/*!* slide when active (when play last to first) *!*/
-/*.slick-slide[aria-hidden="true"]:not([tabindex="-1"]) + .slick-cloned[aria-hidden="true"]  {*/
-/*    filter: grayscale(0);*/
-/*}*/
-/*!* slide when active (when play first to last) *!*/
-/*.slick-slide[aria-hidden="true"] + .slick-cloned[aria-hidden="true"] {*/
-/*    filter: grayscale(0);*/
-/*}*/
 
 @keyframes pulse-black {
     0% {
