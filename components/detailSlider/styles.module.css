@@ -54,10 +54,10 @@
 }
 
 .slider {
-    height: calc(100vh - 320px);
+    height: calc(100vh - 350px);
     /*box-sizing: border-box;*/
     /*height: ;*/
-    width: calc(55vh - 40px);
+    width: 80vw;
     margin: auto;
     overflow: hidden;
     border-radius: 3px;

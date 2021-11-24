@@ -22,17 +22,17 @@ function Slider() {
     const handlers = useSwipeable({
         onSwipedLeft: () => {
             if (cur === 3) {
-                _setCur(0);
+                _setCur(0, cur);
                 return;
             }
-            _setCur(cur + 1)
+            _setCur(cur + 1, cur)
         },
         onSwipedRight: () => {
             if (cur === 0) {
-                _setCur(3);
+                _setCur(3, cur);
                 return;
             }
-            _setCur(cur - 1)
+            _setCur(cur - 1, cur)
         }
     });
     const items = getItems();
@@ -50,10 +50,23 @@ function Slider() {
 
 
 
-    function _setCur(cur) {
+    function _setCur(i, prev) {
+        if (i < prev) {
+            setDir(true)
+        } else {
+            setDir(false)
+        }
+
+        if ((prev === 3 && i === 0)) {
+            setDir(false)
+        }
+        if ((i === 3 && prev === 0)) {
+            setDir(true)
+        }
+
         setTitleActive(false);
         // setCur(cur);
-        setCurItemIndex(cur);
+        setCurItemIndex(i);
         setTimeout(() => setTitleActive(true), 200)
     }
 
@@ -87,19 +100,7 @@ function Slider() {
                         if (i === cur) {
                             return;
                         }
-                        if (i < cur) {
-                            setDir(true)
-                        } else {
-                            setDir(false)
-                        }
-
-                        if ((cur === 3 && i === 0)) {
-                            setDir(false)
-                        }
-                        if ((i === 3 && cur === 0)) {
-                            setDir(true)
-                        }
-                        _setCur(i)
+                        _setCur(i, cur)
                     }} className={cn(styles.img, {[styles.imgActive]: i === cur})}>
                         {/*<Image onLoadingComplete={e => {*/}
                         {/*   */}

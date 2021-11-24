@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }) {
             </DeviceOrientation>
 
             <Footer active={contextState.footerContext || footer} setActive={setFooter}><div className={styles.wrapper}>
-                <a href="https://www.instagram.com/vsya_custom" target={'_blank'} className={styles.footerRow}>
+                <a href="https://www.instagram.com/vsya.custom" target={'_blank'} className={styles.footerRow}>
                     <FiInstagram></FiInstagram>
                     <div className={styles.footerRowInst}>
                         <div>vsya.custom</div>

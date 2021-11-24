@@ -102,7 +102,7 @@ function Shopper () {
                 </p>
             </article>
             <div className={styles.buttons}>
-                <Button href={'/'} descrTop={tt.delivery} descr={tt.priceDescr}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
+                <Button hrefOut={'https://www.instagram.com/vsya.custom'} descrTop={tt.delivery} descr={tt.priceDescr}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
                 <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
             </div>
             <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
