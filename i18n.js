@@ -8,7 +8,7 @@ export default {
         detailFirst: ['All', 'in rich colors', 'saturated with mysticism and magic of minimalism'],
         detailSecond: ['Yummy', 'crispy dark matter packaging'],
         delivery: 'the work price - 20$',
-        priceDescr: '10$ world shipping',
+        priceDescr: 'world shipping',
         mail: 'send mail',
         collections: {
             sd: ['sweet', 'dreams']
