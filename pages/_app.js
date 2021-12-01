@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
     const [curItemIndex, setCurItemIndex] = useState(2);
     const [isMobile, setIsMobile] = useState(true);
     const tabletMatched = useReactSimpleMatchMedia('(min-width: 767px)');
-    console.log(tabletMatched)
+    console.log(tt, 'tt')
 
     useEffect(() => {
         if (window.orientation !== undefined) {
@@ -65,11 +65,11 @@ function MyApp({ Component, pageProps }) {
 
                 <DeviceOrientation lockOrientation={'portrait'}>
                     <Orientation orientation={'landscape'}>
-                        { isMobile ? <ScreenRotation /> : <NdPhone /> }
+                        { isMobile ? <ScreenRotation /> : <NdPhone tt={tt} /> }
                     </Orientation>
                     <Orientation orientation='portrait'>
                         {
-                            tabletMatched ? <NdPhone /> : <Component {...pageProps} />
+                            tabletMatched ? <NdPhone tt={tt} /> : <Component {...pageProps} />
                         }
 
                     </Orientation>
@@ -96,12 +96,12 @@ function MyApp({ Component, pageProps }) {
     </>
 }
 
-function NdPhone () {
+function NdPhone ({tt}) {
     return <div className={styles.ndPhone}>
         <MdOutlineDesktopAccessDisabled />
-        <div className={styles.ndPhoneContent}>Немножко не доделали 🙄</div>
+        <div className={styles.ndPhoneContent}>{tt && tt.devTitle1}</div>
         <AiOutlineMobile />
-        <div className={styles.ndPhoneContent}>Но просмотр уже доступен на мобильных устройствах 😎</div>
+        <div className={styles.ndPhoneContent}>{tt && tt.devTitle2}</div>
     </div>
 }
 
