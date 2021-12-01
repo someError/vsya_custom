@@ -23,6 +23,7 @@
     "react-icons": "^4.3.1",
     "react-image-magnify": "^2.7.4",
     "react-screen-orientation": "0.0.4",
+    "react-simple-matchmedia": "^3.3.0",
     "react-slick": "^0.28.1",
     "react-spring": "^9.3.0",
     "react-spring-3d-carousel": "^1.2.1",

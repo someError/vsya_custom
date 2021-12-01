@@ -232,31 +232,20 @@
     font-weight: 400;
 }
 
-.screenRotation {
-    color: #9c261a;
-    font-size: 2.6rem;
+.ndPhone {
     position: fixed;
-    top: calc(45vh - 1.3rem);
-    left: calc(50vw - 1.3rem);
-    animation: screenRotate 2s linear infinite;
+    top: 30vh;
+    left: calc(50% - 200px);
+    max-width: 320px;
+    font-size: .875rem;
+    color: antiquewhite;
+    text-align: center;
+    line-height: 1.75rem;
 }
 
-@keyframes screenRotate {
-    0% {
-        transform: rotate(0deg) scale(.95);
-    }
-
-    25% {
-        transform: rotate(-45deg) scale(1);
-    }
-
-    35% {
-        transform: rotate(-45deg);
-    }
-
-    100% {
-        transform: rotate(0deg) scale(.95);
-    }
+.ndPhone svg {
+    color: #9c261a;
+    font-size: 2.75rem;
 }
 
 

@@ -9,6 +9,7 @@ import {useScript} from "../../hooks/useScript";
 import Creepy from "../../components/creepy";
 import { GiGalaxy } from 'react-icons/gi'
 import { FaBitcoin, FaInstagram } from 'react-icons/fa'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi'
 import { MdOutlinePhoto, MdClose } from 'react-icons/md'
 import Button from '../../components/button'
@@ -18,11 +19,9 @@ import cn from 'classnames'
 import Context from "../../appContext";
 import i18n from "../../i18n";
 
-function Shopper () {
+function Shopper ({tote}) {
+    const router = useRouter()
     const appState = useContext(Context);
-    const router = useRouter();
-    const { query: { id } } = router;
-    const tote = getItems(id);
     const handlers = useSwipeable({
         onSwipedLeft: _showGallery,
         onSwipedRight: _hideGallery
@@ -33,6 +32,7 @@ function Shopper () {
     });
     const tt = i18n[router.locale]
     const [showGallery, setShowGallery] = useState(false)
+    const [routerLoading, setRouterLoading] = useState(false)
 
     function _showGallery () {
         appState.setFooterAppHandlerEnabled(false)
@@ -88,7 +88,23 @@ function Shopper () {
                     />)
                 }
             </div>
-            <Creepy className={styles.blobWrap} onClick={() => showGallery ? _hideGallery() : router.push('/')}><div className={cn('blob', styles.blob)}><BiChevronsLeft></BiChevronsLeft></div></Creepy>
+            <Creepy
+                className={styles.blobWrap}
+                onClick={() => {
+                    if (showGallery) {
+                        _hideGallery()
+                    } else {
+                        setRouterLoading(true)
+                        setTimeout(() => router.push('/'), 100)
+                    }
+                }}
+            >
+            <div className={cn('blob', styles.blob)}>
+                {
+                    routerLoading ? <AiOutlineLoading3Quarters className={'rotation'} /> : <BiChevronsLeft />
+                }
+            </div>
+            </Creepy>
         </div>
         <div className={'wrapper'}>
             <article className={cn(styles.article, styles.chat)}>
@@ -103,7 +119,7 @@ function Shopper () {
             </article>
             <div className={styles.buttons}>
                 <Button hrefOut={'https://www.instagram.com/vsya.custom'} descrTop={tt.delivery} descr={tt.priceDescr}>{tt.orderInst} <br/> instgrm <FaInstagram></FaInstagram></Button>
-                <Button disabled href={'/'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
+                <Button disabled href={'#'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
             </div>
             <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
                 <div className={cn('blob', styles.blob)}>
@@ -118,10 +134,27 @@ function DescrText (props) {
     return <>{ props.children } <br/></>
 }
 
+export async function getStaticPaths() {
+    // Call an external API endpoint to get posts
+    const res = getItems()
+    console.log(res);
+
+    // Get the paths we want to pre-render based on posts
+    const paths = res.map((item) => ({
+        params: { id: item.id },
+    }))
+
+    // We'll pre-render only these paths at build time.
+    // { fallback: false } means other routes should 404.
+    return { paths, fallback: false }
+}
+
 /**TODO: GET STATIC PATH!!!!!*/
-// export function getServerSideProps(context) {
-//
-//     return { props: { tote } }
-// }
+export async function getStaticProps({ params }) {
+    const tote = getItems(params.id);
+
+    // Pass post data to the page via props
+    return { props: { tote } }
+}
 
 export default Shopper

@@ -55,7 +55,7 @@
     content: '';
     background: rgba(219, 55, 39, .6);
     transform: translateX(-1%);
-    animation: preloader 1s ease-out;
+    animation: preloader 1.5s linear;
 }
 
 @keyframes preloader {
@@ -63,6 +63,23 @@
         transform: translateX(-101%);
         box-shadow: 0 0 0 0 rgba(219, 55, 39, 0.7);
     }
+
+    25% {
+        transform: translateX(-70%);
+        box-shadow: 0 0 0 0 rgba(219, 55, 39, 0.7);
+    }
+
+    40% {
+        transform: translateX(-60%);
+        box-shadow: 0 0 0 0 rgba(219, 55, 39, 0.7);
+    }
+
+    80% {
+        transform: translateX(-10%);
+        box-shadow: 0 0 0 0 rgba(219, 55, 39, 0.7);
+    }
+
+
     100% {
         transform: translateX(-1%);
         box-shadow: 0 0 0 0 rgba(219, 55, 39, 0);

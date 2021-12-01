@@ -161,7 +161,7 @@
     transform: scale(.8);
     transition: none;
     border-color: transparent;
-    width: 65%!important;
+    width: 70%!important;
     margin: 10px auto!important;
 }
 
@@ -181,9 +181,9 @@
     border-color: var(--clr3);
 }
 
-.btn span {
-    opacity: .7;
-}
+/*.btn span {*/
+/*    opacity: .7;*/
+/*}*/
 
 .imgActive .btn {
     opacity: 1!important;

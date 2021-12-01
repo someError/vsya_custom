@@ -3,15 +3,17 @@ import '../public/assets/fonts/stylesheet.css'
 import {AnimateSharedLayout} from "framer-motion";
 import styles from "./styles.module.css";
 import {FiInstagram, FiMail} from "react-icons/fi";
-import { MdScreenRotation } from 'react-icons/md'
+import { AiOutlineMobile } from 'react-icons/ai'
 import Footer from "../components/footer";
-import {useState ,useContext, createContext} from "react";
+import {useState, useContext, createContext, useEffect} from "react";
 import {useSwipeable} from "react-swipeable";
 import Header from '../components/header'
 import Context from "../appContext";
 import {useRouter} from "next/router";
 import i18n from "../i18n";
 import dynamic from 'next/dynamic'
+import { ScreenRotation } from "../components/devCup";
+import useReactSimpleMatchMedia from 'react-simple-matchmedia'
 
 const DeviceOrientation = dynamic(() => import('react-screen-orientation'), { ssr: false })
 const Orientation = dynamic(() => import('react-screen-orientation').then((module) => module.Orientation), { ssr: false })
@@ -24,6 +26,17 @@ function MyApp({ Component, pageProps }) {
     const [footerContext, setFooterContext] = useState(false);
     const [footerAppHandlerEnabled, setFooterAppHandlerEnabled] = useState(true);
     const [curItemIndex, setCurItemIndex] = useState(2);
+    const [isMobile, setIsMobile] = useState(true);
+    const tabletMatched = useReactSimpleMatchMedia('(min-width: 767px)');
+    console.log(tabletMatched)
+
+    useEffect(() => {
+        if (window.orientation !== undefined) {
+            document.body.classList.add("mobile");
+        } else {
+            setIsMobile(false);
+        }
+    }, [])
 
     const contextState = {
         footerAppHandlerEnabled,
@@ -31,7 +44,8 @@ function MyApp({ Component, pageProps }) {
         footerContext,
         setFooterContext,
         curItemIndex,
-        setCurItemIndex
+        setCurItemIndex,
+        isMobile
     }
 
     const handlers = useSwipeable({
@@ -44,11 +58,14 @@ function MyApp({ Component, pageProps }) {
             <Header />
 
             <DeviceOrientation lockOrientation={'portrait'}>
-                <Orientation orientation='landscape'>
-                    <MdScreenRotation className={styles.screenRotation} />
+                <Orientation orientation={'landscape'}>
+                    { isMobile ? <ScreenRotation /> : <NdPhone /> }
                 </Orientation>
-                <Orientation orientation='portrait' alwaysRender={false}>
-                    <Component {...pageProps} />
+                <Orientation orientation='portrait'>
+                    {
+                        tabletMatched ? <NdPhone /> : <Component {...pageProps} />
+                    }
+
                 </Orientation>
             </DeviceOrientation>
 
@@ -70,6 +87,13 @@ function MyApp({ Component, pageProps }) {
             </div></Footer>
         </div>
     </Context.Provider>
+}
+
+function NdPhone () {
+    return <div className={styles.ndPhone}>
+        <AiOutlineMobile />
+        <div className={styles.ndPhoneContent}>Немножко не доделали 🙄<br/> Но просмотр уже доступен на мобильных устройствах 😎</div>
+    </div>
 }
 
 export default MyApp

@@ -1,0 +1,30 @@
+.screenRotation {
+    position: fixed;
+    color: #9c261a;
+    font-size: 2.6rem;
+    top: calc(45vh - 1.3rem);
+    left: calc(50vw - 1.3rem);
+    animation: screenRotate 2s linear infinite;
+}
+
+@keyframes screenRotate {
+    0% {
+        transform: rotate(0deg) scale(.95);
+    }
+
+    25% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    35% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(.95);
+    }
+}
+
+.needPhone {
+    color: #9c261a;
+}
