@@ -234,18 +234,23 @@
 
 .ndPhone {
     position: fixed;
-    top: 30vh;
-    left: calc(50% - 200px);
-    max-width: 320px;
+    top: calc(50vh - 160px);
+    left: calc(50vw - 160px);
+    width: 320px;
     font-size: .875rem;
     color: antiquewhite;
     text-align: center;
     line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+
+.ndPhoneContent {
+    padding: 10px 0 20px;
 }
 
 .ndPhone svg {
-    color: #9c261a;
-    font-size: 2.75rem;
+    color: antiquewhite;
+    font-size: 2.25rem;
 }
 
 
