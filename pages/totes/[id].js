@@ -134,18 +134,22 @@ function DescrText (props) {
     return <>{ props.children } <br/></>
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
     // Call an external API endpoint to get posts
     const res = getItems()
-    console.log(res);
+    const paths = locales.reduce(
+        (acc, next) => [
+            ...acc,
+            ...res.map((item) => ({
+                params: {
+                    id: item.id,
+                },
+                locale: next,
+            })),
+        ],
+        []
+    );
 
-    // Get the paths we want to pre-render based on posts
-    const paths = res.map((item) => ({
-        params: { id: item.id },
-    }))
-
-    // We'll pre-render only these paths at build time.
-    // { fallback: false } means other routes should 404.
     return { paths, fallback: false }
 }
 
