@@ -16,8 +16,13 @@ function Btn(props) {
 
     function renderLink (href) {
         return <a className={cn(styles.root, props.className, {[styles.disabled]: props.disabled})} href={href} onClick={(e) => {
-            props.disabled && e.preventDefault()
-            setLoading(true)
+            if (props.disabled || loading) {
+                e.preventDefault()
+            } else {
+                setLoading(true)
+                setTimeout(() => setLoading(false), 1500)
+            }
+
         }}>
             {/*<span className={styles.loading}>Loading{dotsView}</span>*/}
             { loading && <span className={styles.loading}><div>Give a sec <AiOutlineLoading3Quarters className={'rotation'} /></div></span> }
