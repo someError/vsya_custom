@@ -23,8 +23,9 @@ function Promo ({ data }) {
     //     },3000)
     // }, []);
 
-    const videoSrcs = ['/assets/imgs/redlight480.mp4', '/assets/imgs/blueloop2.mp4', ]
-    const randVideoIndex = Math.floor(Math.random() * 2);
+    const videoSrcs = ['/assets/imgs/blueloop2.mp4', '/assets/imgs/blueloop2.mp4', '/assets/imgs/redlight480.mp4', '/assets/imgs/blueloop2.mp4', ]
+    const randVideoIndex = Math.floor(Math.random() * 3) + 1
+    console.log(randVideoIndex, 'index')
 
     return <div className={styles.root}>
         <video className={cn(styles.video, styles[`video${randVideoIndex}`])} playsInline autoPlay muted loop id="bgvid">
