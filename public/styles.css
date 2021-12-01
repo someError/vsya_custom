@@ -66,6 +66,18 @@ body {
     transform: translateY(-38vh)!important;
 }
 
+@media screen and (min-height: 730px) {
+    .slick-list {
+        transform: translateY(-60vw)!important;
+    }
+}
+
+@media screen and (min-height: 799px) {
+    .slick-list {
+        transform: translateY(-50vw)!important;
+    }
+}
+
 /*@media not all and (min-resolution:.001dpcm) {*/
 /*    .slider {*/
 /*        height: calc(100vh - 400px);*/
