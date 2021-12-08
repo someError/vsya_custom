@@ -37,16 +37,20 @@ function Slider() {
     });
     const items = getItems();
 
+    const totalItemsCnt = items.length
+
     const [titleActive, setTitleActive] = useState(true);
     // const [cur, setCur] = useState(2);
     const [leftDir, setDir] = useState(false);
-    const [isImgsLoading, setIsImgsLoading] = useState(false);
+    const [loadItemsCnt, setLoadItemsCnt] = useState(0);
 
     let lineTranslatePercent = (1 - items[cur].cnt / 7) * 100;
-    // lineTranslatePercent = lineTranslatePercent === 1 ? 0 : lineTranslatePercent * 100;
 
-    let loadingImgsCnt = 0;
+    // let loadingImgsCnt = 0;
 
+    function onLoad () {
+        setLoadItemsCnt(loadItemsCnt + 1)
+    }
 
 
 
@@ -70,14 +74,14 @@ function Slider() {
         setTimeout(() => setTitleActive(true), 200)
     }
 
-    useEffect(() => {
-        setTimeout(() => setIsImgsLoading(true), 1000)
-    }, [])
+    // useEffect(() => {
+    //     setTimeout(() => setIsImgsLoading(true), 1000)
+    // }, [])
 
     return <div className={cn(styles.root, [styles[`root${cur}`]])}>
-        { !isImgsLoading && <LoadingScreen /> }
+        { loadItemsCnt < totalItemsCnt && <LoadingScreen curLoads={loadItemsCnt} totalLoads={totalItemsCnt}/> }
 
-        <div className={cn(styles.content, {[styles.contentActive]: isImgsLoading})}>
+        <div className={cn(styles.content, {[styles.contentActive]: totalItemsCnt <= loadItemsCnt})}>
             <div className={cn(styles.picassoWrap, styles[`picassoWrap${cur}`])}>
                 <div className={styles.picassoTitle}>
                     {/*<div><GiPaintBrush/></div>*/}
@@ -116,7 +120,9 @@ function Slider() {
                             //             setIsImgsLoading(true);
                             //         }
                             //     }
+                            //     console.log('load')
                             // }}
+                            onLoad={onLoad}
                             layoutId={item.id}
                             src={item.src}
                             animate={{ scale: 1 }}

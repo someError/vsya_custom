@@ -54,8 +54,9 @@
     width: 102%;
     content: '';
     background: rgba(219, 55, 39, .6);
-    transform: translateX(-1%);
-    animation: preloader 1.5s linear;
+    transform: translateX(var(--loadPercent));
+    /*animation: preloader 1.5s linear;*/
+    transition: transform ease-out .5s;
 }
 
 @keyframes preloader {
