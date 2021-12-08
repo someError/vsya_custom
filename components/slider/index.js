@@ -43,6 +43,7 @@ function Slider() {
     // const [cur, setCur] = useState(2);
     const [leftDir, setDir] = useState(false);
     const [loadItemsCnt, setLoadItemsCnt] = useState(0);
+    const [loadingDone, setLoadingDone] = useState(false)
 
     let lineTranslatePercent = (1 - items[cur].cnt / 7) * 100;
 
@@ -51,6 +52,13 @@ function Slider() {
     function onLoad () {
         setLoadItemsCnt(loadItemsCnt + 1)
     }
+
+    useEffect(() => {
+        if (loadItemsCnt === totalItemsCnt) {
+            console.log('tidic')
+            setTimeout(() => setLoadingDone(true), 500)
+        }
+    }, [loadItemsCnt])
 
 
 
@@ -79,9 +87,9 @@ function Slider() {
     // }, [])
 
     return <div className={cn(styles.root, [styles[`root${cur}`]])}>
-        { loadItemsCnt < totalItemsCnt && <LoadingScreen curLoads={loadItemsCnt} totalLoads={totalItemsCnt}/> }
+        { !loadingDone && <LoadingScreen curLoads={loadItemsCnt} totalLoads={totalItemsCnt}/> }
 
-        <div className={cn(styles.content, {[styles.contentActive]: totalItemsCnt <= loadItemsCnt})}>
+        <div className={cn(styles.content, {[styles.contentActive]: loadingDone})}>
             <div className={cn(styles.picassoWrap, styles[`picassoWrap${cur}`])}>
                 <div className={styles.picassoTitle}>
                     {/*<div><GiPaintBrush/></div>*/}

@@ -76,7 +76,7 @@
     position: relative;
     z-index: 2;
     letter-spacing: 1px;
-    font-size: .825rem;
+    font-size: .8rem;
     /*opacity: .8;*/
     /*font-family: 'vampire95', sans-serif;*/
 }
@@ -292,7 +292,7 @@
 
 @media not all and (min-resolution:.001dpcm) {
     .glitch {
-        height: calc(100vh - 320px);
+        height: calc(100vh - 290px);
     }
 }
 
