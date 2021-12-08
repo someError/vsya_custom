@@ -63,20 +63,21 @@ body {
 .slick-list {
     overflow: visible!important;
     /*transform: translateY(-63vw)!important;*/
-    transform: translateY(-38vh)!important;
+    /*transform: translateY(-38vh)!important;*/
+    transform: translateY(calc(-27vh - 50px))!important;
 }
 
-@media screen and (min-height: 730px) {
-    .slick-list {
-        transform: translateY(-60vw)!important;
-    }
-}
+/*@media screen and (min-height: 730px) {*/
+/*    .slick-list {*/
+/*        transform: translateY(-60vw)!important;*/
+/*    }*/
+/*}*/
 
-@media screen and (min-height: 799px) {
-    .slick-list {
-        transform: translateY(-50vw)!important;
-    }
-}
+/*@media screen and (min-height: 799px) {*/
+/*    .slick-list {*/
+/*        transform: translateY(-50vw)!important;*/
+/*    }*/
+/*}*/
 
 /*@media not all and (min-resolution:.001dpcm) {*/
 /*    .slider {*/

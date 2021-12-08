@@ -221,7 +221,7 @@
     transition: transform .75s ease-out;
     /*transition-property: z-index;*/
     /*-webkit-transition-delay: 1s;*/
-    width: 40%;
+    width: 18vh;
     max-width: 260px;
     transform: scale(.7);
     cursor: pointer;
