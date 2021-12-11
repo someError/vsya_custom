@@ -5,7 +5,7 @@ import { useState } from "react";
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import {useRouter} from "next/router";
 
-function ç(props) {
+function Btn(props) {
     const router = useRouter()
     const [loading, setLoading] = useState(false)
 
