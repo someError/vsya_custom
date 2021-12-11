@@ -9,14 +9,6 @@ function Btn(props) {
     const router = useRouter()
     const [loading, setLoading] = useState(false)
 
-    // if (props.hrefOut) {
-    //     return renderLink(props.hrefOut)
-    // }
-    //
-    // return <Link href={props.href}>
-    //     { renderLink() }
-    // </Link>
-
     return renderLink(props.href)
 
     function renderLink (href) {
