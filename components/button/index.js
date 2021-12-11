@@ -3,24 +3,35 @@ import cn from 'classnames'
 import Link from 'next/link'
 import { useState } from "react";
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import {useRouter} from "next/router";
 
 function Btn(props) {
+    const router = useRouter()
     const [loading, setLoading] = useState(false)
-    if (props.hrefOut) {
-        return renderLink(props.hrefOut)
-    }
 
-    return <Link href={props.href}>
-        { renderLink() }
-    </Link>
+    // if (props.hrefOut) {
+    //     return renderLink(props.hrefOut)
+    // }
+    //
+    // return <Link href={props.href}>
+    //     { renderLink() }
+    // </Link>
+
+    return renderLink(props.href)
 
     function renderLink (href) {
         return <a className={cn(styles.root, props.className, {[styles.disabled]: props.disabled})} href={href} onClick={(e) => {
             if (props.disabled || loading) {
                 e.preventDefault()
             } else {
-                setLoading(true)
-                setTimeout(() => setLoading(false), 1500)
+                if (props.target === '_blank') {
+                    setLoading(true)
+                    setTimeout(() => setLoading(false), 2000)
+                } else {
+                    e.preventDefault()
+                    setLoading(true)
+                    router.push(href)
+                }
             }
 
         }}>
