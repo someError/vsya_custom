@@ -40,9 +40,10 @@ function MyApp({Component, pageProps}) {
     }, [])
 
     useEffect(() => {
-        // if(navigator.userAgent.includes("Instagram")){
+        if(navigator.userAgent.includes("Instagram")){
+        window.open('https://vsya.store', '_blank')
         //     window.location.href = "https://vsya.store";
-        // }
+        }
     }, [])
 
     const contextState = {
