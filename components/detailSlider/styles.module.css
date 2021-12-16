@@ -67,6 +67,12 @@
     /*overflow: hidden;*/
 }
 
+.sliderInst {
+    height: calc(100vh - 360px);
+    width: calc(55vh - 85px);
+}
+
+
 /*@media not all and (min-resolution:.001dpcm) {*/
 /*    .slider {*/
 /*        height: calc(100vh - 400px);*/

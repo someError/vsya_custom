@@ -29,6 +29,7 @@ function MyApp({Component, pageProps}) {
     const [footerAppHandlerEnabled, setFooterAppHandlerEnabled] = useState(true);
     const [curItemIndex, setCurItemIndex] = useState(2);
     const [isMobile, setIsMobile] = useState(true);
+    const [isInstagram, setIsInstagram] = useState(false);
     const tabletMatched = useReactSimpleMatchMedia('(min-width: 767px)');
 
     useEffect(() => {
@@ -41,7 +42,7 @@ function MyApp({Component, pageProps}) {
 
     useEffect(() => {
         if(navigator.userAgent.includes("Instagram")){
-        window.open('https://vsya.store', '_blank')
+            setIsInstagram(true)
         //     window.location.href = "https://vsya.store";
         }
     }, [])
@@ -53,7 +54,8 @@ function MyApp({Component, pageProps}) {
         setFooterContext,
         curItemIndex,
         setCurItemIndex,
-        isMobile
+        isMobile,
+        isInstagram
     }
 
     const handlers = useSwipeable({

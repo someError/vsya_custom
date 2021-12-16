@@ -3,6 +3,7 @@ import Head from 'next/head'
 import {useEffect, useRef} from "react";
 import styles from './styles.module.css'
 import {useSwipeable} from "react-swipeable";
+import cn from 'classnames'
 
 export default function DetailSlider(props) {
     const sliderRef = useRef(null);
@@ -46,7 +47,7 @@ export default function DetailSlider(props) {
                 <div className={styles.sliderMaskTop} onClick={() => sliderRef.current && sliderRef.current.slickPrev()}><div className={'blob'} /></div>
                 <div className={styles.sliderMaskBot} onClick={() => sliderRef.current && sliderRef.current.slickNext()}><div className={'blob'} /></div>
             </div>
-            <Slider ref={sliderRef} className={styles.slider} {...settings}>
+            <Slider ref={sliderRef} className={cn(styles.slider, {[styles.sliderInst]: props.isInstagram})} {...settings}>
                 {
                     srcArray.map(src => (
                         <div>

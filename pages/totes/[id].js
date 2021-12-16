@@ -22,6 +22,7 @@ import i18n from "../../i18n";
 function Shopper ({tote}) {
     const router = useRouter()
     const appState = useContext(Context);
+
     const handlers = useSwipeable({
         onSwipedLeft: _showGallery,
         onSwipedRight: _hideGallery
@@ -59,7 +60,7 @@ function Shopper ({tote}) {
                 <div className={styles.detailsMaskContent}></div>
             </div>
             <div className={styles.detailsContent}>
-                <DetailSlider srcArray={tote.gallery}></DetailSlider>
+                <DetailSlider srcArray={tote.gallery} isInstagram={appState.isInstagram} />
                 {/*<VerticalSlider></VerticalSlider>*/}
                 <article className={cn(styles.article)} {...contentHandlers}>
                     {/*<p></p>️*/}
@@ -78,7 +79,7 @@ function Shopper ({tote}) {
         </div>
         <div className={styles.title}><Creepy><span>{tote.name}</span><span>{tote.name2}</span></Creepy></div>
         <div className={styles.glitchWrap}>
-            <div className={styles.glitch}>
+            <div className={cn(styles.glitch, {[styles.glitchInst]: appState.isInstagram})}>
                 {
                     [...Array(5).keys()].map(i => <div
                         key={i}

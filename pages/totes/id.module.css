@@ -290,9 +290,17 @@
     overflow: hidden;
 }
 
+.glitchInst {
+    height: calc(100vh - 190px);
+}
+
 @media not all and (min-resolution:.001dpcm) {
     .glitch {
         height: calc(100vh - 290px);
+    }
+
+    .glitchInst {
+        height: calc(100vh - 190px);
     }
 }
 
