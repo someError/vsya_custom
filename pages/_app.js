@@ -39,6 +39,12 @@ function MyApp({Component, pageProps}) {
         }
     }, [])
 
+    useEffect(() => {
+        if(navigator.userAgent.includes("Instagram")){
+            window.location.href = "https://vsya.store";
+        }
+    }, [])
+
     const contextState = {
         footerAppHandlerEnabled,
         setFooterAppHandlerEnabled,
