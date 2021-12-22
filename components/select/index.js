@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import cn from 'classnames'
 import { RiArrowDownSLine} from 'react-icons/ri'
 import { MdLanguage } from 'react-icons/md'
@@ -7,18 +7,17 @@ import Creepy from "../creepy";
 
 function Select (props) {
     const { options } = props;
-    const initVal = props.initValue || options[0];
+    const value = props.value || options[0];
     const [open, setOpen] = useState(false);
-    const [value, setvalue] = useState(initVal);
+    // const [value, setvalue] = useState(initVal);
     const [opts, setOpts] = useState(getOptions(initVal))
-
 
     function getOptions(activeValue) {
         return options.filter(({value}) => value !== activeValue.value)
     }
 
     function handleChange(value) {
-        setvalue(value)
+        // setvalue(value)
         setOpts(getOptions(value))
         setOpen(false)
         props.onChange(value)

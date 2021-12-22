@@ -9,15 +9,14 @@ function Header () {
     const router = useRouter();
     const langs = [{value: 'en', label: 'en'}, {value: 'ru', label: 'ru'}];
     const tt = i18n[router.locale];
-    console.log(tt)
-    // console.log(router)
+
     return (
         <div className={styles.root}>
             <div className={'wrapper'}>
                 <Link href={'/'}><a className={styles.logo}><img src='/assets/imgs/vsya-logo.png' alt='Кастом одежды, horror, psychedelic'/></a></Link>
                 <Select
                     className={styles.select}
-                    initValue={langs.filter(({ value }) => router.locale === value)[0]}
+                    value={langs.filter(({ value }) => router.locale === value)[0]}
                     onChange={({ value }) => router.push(router.asPath, router.asPath,{locale: value})}
                     options={langs}
                 />
