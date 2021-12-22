@@ -15,7 +15,6 @@ import {useSwipeable} from "react-swipeable";
 // import src2 from '/public/assets/imgs/shoper-removebg-preview.png'
 function Promo({data}) {
     const router = useRouter()
-    console.log(router)
     // const videoRef = useRef();
     //
     // useEffect(() => {
@@ -26,13 +25,13 @@ function Promo({data}) {
 
     let language = window.navigator ? (window.navigator.language || window.navigator.systemLanguage || window.navigator.userLanguage) : "ru";
     language = language.substr(0, 2).toLowerCase();
-    alert(language)
-    if (language !== 'ru') {
-        if (router.locale !== 'en') {
-            alert(language + 'redirect')
-            router.push(router.asPath, router.asPath, {locale: 'en'})
-        }
-    }
+    // if (language !== 'ru') {
+    //     if (router.locale !== 'en') {
+    //
+    //     }
+    // }
+
+    router.push(router.asPath, router.asPath, {locale: 'en'})
 
     const videoSrcs = ['/assets/imgs/blueloop2.mp4', '/assets/imgs/blueloop2.mp4', '/assets/imgs/redlight480.mp4', '/assets/imgs/blueloop2.mp4',]
     const randVideoIndex = Math.floor(Math.random() * 3) + 1
