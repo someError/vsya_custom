@@ -39,6 +39,10 @@
     /*text-transform: uppercase;*/
 }
 
+.title small {
+    font-size: 0.875em;
+}
+
 .title span {
     color: var(--clr3);
 }
