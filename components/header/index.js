@@ -21,7 +21,7 @@ function Header () {
                     onChange={({ value }) => router.push(router.asPath, router.asPath,{locale: value})}
                     options={langs}
                 />
-                { tt.collections && <h1 className={styles.title}><small>{tt.hashtag}</small>, <span>#{ tt.collections['sd'][0] }</span>{ tt.collections['sd'][1] }</h1> }
+                { tt.collections && <h1 className={styles.title}>#<small>{tt.hashtag}</small>, <span>#{ tt.collections['sd'][0] }</span>{ tt.collections['sd'][1] }</h1> }
             </div>
         </div>
     )
