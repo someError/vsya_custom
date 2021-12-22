@@ -27,7 +27,7 @@ function MyApp({Component, pageProps}) {
     const [footer, setFooter] = useState(false);
     const [footerContext, setFooterContext] = useState(false);
     const [footerAppHandlerEnabled, setFooterAppHandlerEnabled] = useState(true);
-    const [curItemIndex, setCurItemIndex] = useState(2);
+    const [curItemIndex, setCurItemIndex] = useState(3);
     const [isMobile, setIsMobile] = useState(true);
     const [isInstagram, setIsInstagram] = useState(false);
     const tabletMatched = useReactSimpleMatchMedia('(min-width: 767px)');
