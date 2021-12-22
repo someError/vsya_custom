@@ -58,7 +58,7 @@ export function getItems(id) {
             name2: 'shy',
             id: 'whooshy',
             srcDetail: '/assets/imgs/whoops-detail.jpeg',
-            cnt: 7,
+            cnt: 6,
             gallery: [
                 '/assets/imgs/whoops/whoops3.jpeg',
                 '/assets/imgs/whoops/whoops4.jpeg',
