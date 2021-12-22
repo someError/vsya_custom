@@ -13,7 +13,7 @@ export default {
         collections: {
             sd: ['sweet', 'dreams']
         },
-        hashtag: '#custom',
+        hashtag: '#17700',
         devTitle1: 'A little not finished 🙄',
         devTitle2: 'But you can already watch it on mobile devices 😎',
     },
@@ -31,7 +31,7 @@ export default {
         collections: {
             sd: ['сладкие', 'сны']
         },
-        hashtag: '#кастом',
+        hashtag: '#17700',
         devTitle1: 'Немножко не доделали 🙄',
         devTitle2: 'Но просмотр уже доступен на мобильных устройствах 😎',
     }
