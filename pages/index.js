@@ -23,14 +23,6 @@ function Promo({data}) {
     //     },3000)
     // }, []);
 
-    let language = window.navigator ? (window.navigator.language || window.navigator.systemLanguage || window.navigator.userLanguage) : "ru";
-    language = language.substr(0, 2).toLowerCase();
-    if (language !== 'ru') {
-        if (router.locale !== 'en') {
-            router.push(router.asPath, router.asPath, {locale: 'en'})
-        }
-    }
-
     const videoSrcs = ['/assets/imgs/blueloop2.mp4', '/assets/imgs/blueloop2.mp4', '/assets/imgs/redlight480.mp4', '/assets/imgs/blueloop2.mp4',]
     const randVideoIndex = Math.floor(Math.random() * 3) + 1
     console.log(randVideoIndex, 'index')

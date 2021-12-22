@@ -45,6 +45,14 @@ function MyApp({Component, pageProps}) {
             setIsInstagram(true)
         //     window.location.href = "https://vsya.store";
         }
+
+        let language = window.navigator ? (window.navigator.language || window.navigator.systemLanguage || window.navigator.userLanguage) : "ru";
+        language = language.substr(0, 2).toLowerCase();
+        if (language !== 'ru') {
+            if (router.locale !== 'en') {
+                router.push(router.asPath, router.asPath, {locale: 'en'})
+            }
+        }
     }, [])
 
     const contextState = {

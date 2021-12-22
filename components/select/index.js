@@ -6,20 +6,20 @@ import { MdLanguage } from 'react-icons/md'
 import Creepy from "../creepy";
 
 function Select (props) {
-    const { options } = props;
-    const value = props.value|| options[0];
+    const { options, value } = props;
+    // const value = props.value|| options[0];
     const [open, setOpen] = useState(false);
     // const [value, setvalue] = useState(initVal);
-    const [opts, setOpts] = useState(getOptions(value))
+    // const [opts, setOpts] = useState(getOptions(value))
 
 
     function getOptions(activeValue) {
-        return options.filter(({value}) => value !== activeValue.value)
+        return options.filter((opt) => opt.value !== value.value)
     }
 
     function handleChange(value) {
         // setvalue(value)
-        setOpts(getOptions(value))
+        // setOpts(getOptions(value))
         setOpen(false)
         props.onChange(value)
     }
@@ -28,7 +28,7 @@ function Select (props) {
                 <div onClick={() => setOpen(!open)} className={styles.activeValue}>{value.label}<RiArrowDownSLine/></div>
                 <ul className={styles.ul}>
                     {
-                        opts.map(option => <li onClick={() => handleChange(option)} className={styles.li}>{ option.label }</li>)
+                        getOptions().map(option => <li onClick={() => handleChange(option)} className={styles.li}>{ option.label }</li>)
                     }
                 </ul>
             </div>
