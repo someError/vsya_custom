@@ -15,6 +15,7 @@ import {useSwipeable} from "react-swipeable";
 // import src2 from '/public/assets/imgs/shoper-removebg-preview.png'
 function Promo({data}) {
     const router = useRouter()
+    const [videoLoaded, setVideoLoaded] = useState(false)
     // const videoRef = useRef();
     //
     // useEffect(() => {
@@ -28,8 +29,12 @@ function Promo({data}) {
     console.log(randVideoIndex, 'index')
 
     return <div className={styles.root}>
-        <video className={cn(styles.video, styles[`video${randVideoIndex}`])} playsInline autoPlay muted loop
-               id="bgvid">
+        <video
+            onLoadedData={() => setVideoLoaded(true)}
+            className={cn(styles.video, styles[`video${randVideoIndex}`], {[styles.videoLoaded]: videoLoaded})}
+            playsInline autoPlay muted loop
+            id="bgvid"
+        >
             <source src={videoSrcs[randVideoIndex]} type="video/mp4"/>
         </video>
         <div className={styles.blackMask}/>

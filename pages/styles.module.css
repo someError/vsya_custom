@@ -13,9 +13,15 @@
     width: 100vw;
     height: 80vh;
     position: fixed;
+    opacity: 0;
     top: 0;
     left: 0;
     filter: sepia(1);
+    transition: 1s ease-out;
+}
+
+.videoLoaded {
+    opacity: 1;
 }
 
 /*.video1 {*/
