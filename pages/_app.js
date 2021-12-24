@@ -16,6 +16,7 @@ import i18n from "../i18n";
 import dynamic from 'next/dynamic'
 import {ScreenRotation} from "../components/devCup";
 import useReactSimpleMatchMedia from 'react-simple-matchmedia'
+import { YMInitializer } from 'react-yandex-metrika'
 
 const DeviceOrientation = dynamic(() => import('react-screen-orientation'), {ssr: false})
 const Orientation = dynamic(() => import('react-screen-orientation').then((module) => module.Orientation), {ssr: false})
@@ -85,8 +86,8 @@ function MyApp({Component, pageProps}) {
         </Head>
         <Context.Provider value={contextState}>
             <div className={styles.component} {...handlers}>
+                <YMInitializer accounts={[86987737]} />
                 <Header/>
-
                 <DeviceOrientation lockOrientation={'portrait'}>
                     <Orientation orientation={'landscape'}>
                         {isMobile ? <ScreenRotation/> : <NdPhone tt={tt}/>}
