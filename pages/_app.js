@@ -17,6 +17,8 @@ import dynamic from 'next/dynamic'
 import {ScreenRotation} from "../components/devCup";
 import useReactSimpleMatchMedia from 'react-simple-matchmedia'
 import { YMInitializer } from 'react-yandex-metrika'
+import {GTag} from '@deptno/gtag-react'
+
 
 const DeviceOrientation = dynamic(() => import('react-screen-orientation'), {ssr: false})
 const Orientation = dynamic(() => import('react-screen-orientation').then((module) => module.Orientation), {ssr: false})
@@ -87,6 +89,7 @@ function MyApp({Component, pageProps}) {
         <Context.Provider value={contextState}>
             <div className={styles.component} {...handlers}>
                 <YMInitializer accounts={[86987737]} />
+                <GTag id={'G-Q1MPJ9G7K6'} />
                 <Header/>
                 <DeviceOrientation lockOrientation={'portrait'}>
                     <Orientation orientation={'landscape'}>
