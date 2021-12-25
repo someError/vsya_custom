@@ -6,7 +6,7 @@ function Creepy (props) {
     }
     return (
         <>
-            <div className={cn(styles.root, props.className)} {..._props}>
+            <b className={cn(styles.root, props.className)} {..._props}>
                 {/*<p>Ты</p>*/}
                 {/*<p className={styles.small}>точно знаешь</p>*/}
                 {/*<p>что</p>*/}
@@ -14,7 +14,7 @@ function Creepy (props) {
                 {/*<p>Спиной??</p>*/}
                 {/*SADAKO*/}
                 { props.children }
-            </div>
+            </b>
 
             <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" version="1.1">
                 <defs>

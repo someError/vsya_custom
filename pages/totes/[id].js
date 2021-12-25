@@ -100,11 +100,11 @@ function Shopper ({tote}) {
                     }
                 }}
             >
-            <div className={cn('blob', styles.blob)}>
+            <span className={cn('blob', styles.blob)}>
                 {
                     routerLoading ? <AiOutlineLoading3Quarters className={'rotation'} /> : <BiChevronsLeft />
                 }
-            </div>
+            </span>
             </Creepy>
         </div>
         <div className={'wrapper'}>
@@ -123,9 +123,9 @@ function Shopper ({tote}) {
                 <Button disabled href={'#'} descr={tt.dev}>{tt.buyCrypto} <br/> crypto<FaBitcoin /></Button>
             </div>
             <Creepy className={styles.blobWrapRight} onClick={() => _toggleGallery()}>
-                <div className={cn('blob', styles.blob)}>
+                <span className={cn('blob', styles.blob)}>
                     { showGallery ? <MdClose /> : <MdOutlinePhoto /> }
-                </div>
+                </span>
             </Creepy>
         </div>
     </div>

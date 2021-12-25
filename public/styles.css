@@ -19,6 +19,10 @@ img {
     max-width: 100%;
 }
 
+b {
+    font-weight: 400;
+}
+
 .wrapper {
     max-width: 767px;
     margin: auto;
